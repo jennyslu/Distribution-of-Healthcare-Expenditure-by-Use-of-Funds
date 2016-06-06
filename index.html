@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Distribution of Healthcare Expenditure by Use of Funds</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+</head>
+
+<body>
+<div id='main-wrapper'>
+	<div id='filters'>
+		<div class='demo current' data-val="Public">Public</div>
+		<div class='demo' data-val="Private">Private</div>
+	</div>
+	<!--space between filter elements and chart-->
+	<div class="clearance"></div>
+	<div id="chart"></div>
+</div>
+<!--end of top wrapper box-->
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script type="text/javascript">
+//~~~~~USER SETTINGS~~~~~
+var USER_DEMO = 'Public';
+var USER_CAUSE = null;
+
+//~~~~~MARGINS~~~~~
+//define margin object according to d3.js conventions
+//calculate width and height
+var margin = {top: 10, right: 15, bottom: 30, left:40},
+	width = 1090 - margin.left - margin.right,
+	height = 700 - margin.top - margin.bottom;
+
+//~~~~~SCALES~~~~~
+//define linear horizontal and vertical scales
+//and colour scale for different categories of spending
+var x = d3.time.scale().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+var colour = d3.scale.category20c();
+
+//~~~~~AXES~~~~~
+//define x-axis format time as year eg. 1975
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickFormat(d3.time.format("%Y"));
+//define y-axis formate as percentage eg. 100%
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(d3.format('%'));
+
+//~~~~~CATEGORY METADATA~~~~~
+//metadata for each category of spending
+var causes_meta = {
+    "Hospitals": { "name": "Hospitals", "descrip": "Hospitals"  },
+    "Other Institutions": { "name": "Other Institutions", "descrip": "Other Institutions" },
+    "Physicians": { "name": "Physicians", "descrip": "Physicians" },
+    "Other Professionals": { "name": "Other Professionals", "descrip": "Dental, Vision Care, Other" },
+    "Drugs": { "name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies" },
+    "Capital": { "name": "Capital", "descrip": "Capital" },
+    "Public Health": { "name": "Public Health", "descrip": "Public Health" },
+    "Administration": { "name": "Administration", "descrip": "Administration" },
+    "Other Health Spending": { "name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services" },
+}
+
+//~~~~~NESTING~~~~~
+//in order to stack data it must be nested into arrays that each represent one category
+//we want nested data to look like this:
+/*[
+	{"key":"Hospital"
+	 "values":[
+		{"use":"Hospital", "year":1975, "prop": 10.9, "sector":"Private"},
+		{"use":"Hospital", "year":1976, "prop": 11.7, "sector":"Private"}, ETC.
+	 ]
+	},
+	{"key":"Drugs"
+	 "values":[
+		{"use":"Drugs", "year":1975, "prop": 31.7, "sector":"Private"},
+		{"use":"Drugs", "year":1976, "prop": 30.4, "sector":"Private"}, ETC.
+	 ]
+	}, ETC.
+]*/
+var nest = d3.nest()
+	.key(function (d) { return d.use; });
+
+//~~~~~STACK LAYOUT~~~~~
+//takes the nested data and computes baseline value (y0) i.e. sum of all previous category y values
+//default offset is 0
+//extract points array by returning "values" array from nested data
+//x-coordinate accessor selects age
+//y-coordinate accessor selects proportion of spending
+var stack = d3.layout.stack()
+    .values(function(d) { return d.values; })
+    .x(function(d) { return d.age; })
+    .y(function(d) { return d.prop; });
+
+//~~~~~CHART AREA GENERATOR~~~~~
+//returned function generates path data for a polygon
+//top line formed by using (x,y1) accessor functions
+//bottom line formed by using (x,y0) accessor functions
+//x accessor function is year
+//y0 accessor function is baseline value computed from stack layout
+//y1 accessor function is sum of baseline value from stack layout and proportion
+var area = d3.svg.area()
+    .x(function(d) { return x(d.year); })
+    .y0(function(d) { return y(d.y0); })
+    .y1(function(d) { return y(d.y0 + d.y); });
+
+//~~~~~START SVG OBJECT~~~~~
+//select chart ID element and append SVG element with specified margins
+//append <g> element and move it into centre of SVG element
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+//~~~~~LOAD DATA~~~~~
+//accessor function (type) coerces strings into numbers
+//callback function (draw) to draw chart
+d3.csv("data/formatted_data.csv", type, draw)
+
+function type(d) {
+	//set year and proportion of spending to numeric values
+	d.year = +d.year;
+	d.prop = +d.prop;
+	return d;
+}
+//~~~~~DRAW CHART~~~~~
+function draw(error, data) {
+	if (error) throw error;
+
+	//filter data by sector depending on user selection
+	var filtered = data.filter(function(d) { return d.sector === USER_DEMO; });
+	//call stack on filtered and nested data
+	var layers = stack(nest.entries(filtered));
+
+	//set domains for x, y, and colour scales
+	x.domain(d3.extent(filtered, function(d) { return d.year; }));
+	y.domain([0, d3.max(filtered, function(d) { return d.y0 + d.y; })]);
+
+	//initiate data join by defining selection to which we will JOIN DATA i.e. layer class element
+	//.data(data) returns UPDATE selection = DOM elements successfully bound to data
+	//.enter() returns ENTER selection = placeholder nodes for each element with no DOM element
+	//append new <path> element as last child of each element in ENTER selection
+	//set class to class
+	//set id to the key i.e. category of spending
+	//set path description to path returned by area
+	//transform attribute lists transform definitions that will apply to element and all its children, to:
+	//      output from anonymous function with d (current datum) and i (current index) as arguments
+	//      and returns: "translate(0,0*20)" = translate(x,y)
+	//      this will move each g element down into its appropriate position with the SVG .chart element
+	svg.selectAll(".layer")
+	    .data(layers)
+	  .enter().append("path")
+	    .attr("class", "layer")
+	    .attr("id", function(d) { return d.key; })
+	    .attr("d", function(d) { return area(d.values); })
+	    .style("fill", function(d, i) { return colour(d.key); });
+}
+</script>
+</body>
+</html>
