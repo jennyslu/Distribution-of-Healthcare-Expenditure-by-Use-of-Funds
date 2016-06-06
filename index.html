@@ -22,7 +22,8 @@
 <script src="js/colorbrewer.min.js"></script>
 <script type="text/javascript">
 //~~~~~USER SETTINGS~~~~~
-var USER_FILTER = 'Private';
+var USER_FILTER = "Private";
+var USER_SELECT = null;
 
 //~~~~~MARGINS~~~~~
 //define margin object according to d3.js conventions
@@ -39,7 +40,6 @@ var y = d3.scale.linear().range([height, 0]);
 var colour = d3.scale.ordinal().range(colorbrewer.Set3[9]);
 
 //~~~~~AXES~~~~~
-
 var numFormatter = d3.format(".0f")
 //define x-axis
 var xAxis = d3.svg.axis()
@@ -133,18 +133,22 @@ function type(d) {
 function draw(error, data) {
 	if (error) throw error;
 
+	//~~~~~FILTER AND STACK~~~~~
 	//filter data by sector depending on user selection
 	var filtered = data.filter(function(d) { return d.sector === USER_FILTER; });
 	//call stack on filtered and nested data
 	var layers = stack(nest.entries(filtered));
 
-	//set domains for x, y, and colour scales
+	//~~~~~SET DOMAINS~~~~~
+	//set domains for x and y scales
 	x.domain(d3.extent(filtered, function(d) { return d.year; }));
 	y.domain([0, d3.max(filtered, function(d) { return d.y0 + d.y; })]);
 	
-	//join data with current selection (layer class elements)
-	//.enter() returns ENTER selection = placeholder nodes for each element with no DOM element
-	//append new <path> element as last child of each element in ENTER selection
+	//~~~~~DATA JOIN STACKED AREA ELEMENTS~~~~~
+	//join data with layer class elements
+	//.data(layers) returns UPDATE selection = array of length 9 contains nothing
+	//.enter() returns ENTER selection = array of 9 objects with data attached
+	//.append("path) appends new <path> element as last child of each element in ENTER selection
 	//set class to class
 	//set id to the key i.e. category of spending
 	//set path description to path returned by area
@@ -157,7 +161,7 @@ function draw(error, data) {
 	    .attr("d", function(d) { return area(d.values); })
 	    .style("fill", function(d) { return colour(d.key); });
 
-	//add axes
+	//~~~~~ADD AXES~~~~~
 	svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
@@ -166,7 +170,7 @@ function draw(error, data) {
         .attr("class", "y axis")
         .call(yAxis);
 
-    //another data join to add labels for each layer
+	//~~~~~DATA JOIN LAYER LABEL ELEMENTS~~~~~
     //don't show "Public Health" label if user selects "Private" sector since spending is 0
     var layer_label = svg.selectAll(".layerlabel")
 	    .data(layers)
@@ -181,9 +185,17 @@ function draw(error, data) {
     		else {
     			return d.key; }});
 
-    //layer interaction
-    var USER_SELECT = null;
-    //adds or removes an event listener (unnamed function) to each element in current selection
+	//~~~~~ADD FILTER BUTTON INTERACTIVITY~~~~~
+    //adds or removes an event listener (unnamed function) to each element in current selection	
+	d3.selectAll("#filters .demo").on("click", function() {
+        d3.select(".demo.current").attr("class", "demo");
+        USER_FILTER = d3.select(this).attr("data-val");
+        d3.select(this).attr("class", "demo current");
+        update();
+    });
+
+
+    //~~~~~ADD LAYER INTERACTIVITY~~~~~
     svg.selectAll(".layer").on("click", function(d,i) {
     	//if user has not clicked and clicks then set USER_SELECT to "id" of clicked on DOM element
 	    if (USER_SELECT === null) {
@@ -194,7 +206,9 @@ function draw(error, data) {
 	    update()
 	});
 
+	//~~~~~UPDATE CHART~~~~~
 	function update() {
+		console.log(USER_FILTER);
         console.log(USER_SELECT);
         filtered = data.filter(function(d) { return d.sector === USER_FILTER; }); 
 
@@ -216,7 +230,6 @@ function draw(error, data) {
         	});
         }
 
-        //update layers
 		//call stack on filtered and nested data
 		var layers = stack(nest.entries(filtered));
 
