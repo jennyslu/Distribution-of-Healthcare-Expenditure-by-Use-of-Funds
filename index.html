@@ -215,11 +215,12 @@ function draw(error, data) {
         		}
         	});
         }
+
         //update layers
 		//call stack on filtered and nested data
 		var layers = stack(nest.entries(filtered));
 
-		//d3 transition on UPDATE selection
+		//d3 transition on UPDATE selection of layers
 		d3.selectAll(".layer")
 		    .data(layers)
 		  .transition()
@@ -227,7 +228,26 @@ function draw(error, data) {
 		    .attr("d", function(d) {
 		        return area(d.values);
 		    });
-	}
+
+	    //d3 transition on UPDATE selection of layer labels
+	    d3.selectAll(".layerlabel")
+	    	.data(layers)
+	       .transition()
+	        .duration(1000)
+		    .attr("transform", function (d) {
+		    	return "translate(" + x(2010) + "," + y(d.values[35].y0 + d.values[35].y/2) + ")"; })
+	    	.attr("dy", "0.5em")
+	    	.text(function (d) { 
+	    		if (USER_FILTER === "Private" && d.key === "Public Health") {
+	    			return ""; }
+	    		else {
+	    			return d.key; }})
+	    	.style("opacity", function(){
+	    		if (USER_SELECT != null) {
+	    			return 0;
+	    		} else { return 1;}
+	    	});
+		}
 }
 </script>
 </body>
