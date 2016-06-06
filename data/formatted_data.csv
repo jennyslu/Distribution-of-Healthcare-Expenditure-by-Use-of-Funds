@@ -1,739 +1,739 @@
 year,prop,sector,use
+1975,1.00E-11,Private,Public Health
 1975,10.97145165,Private,Hospital
 1975,11.32574185,Private,Other Institutions
 1975,0.923215114,Private,Physicians
 1975,33.01714112,Private,Other Professionals
 1975,31.689866,Private,Drugs
-1975,5.506533168,Private,Capital
-1975,1.00E-11,Private,Public Health
 1975,2.49028578,Private,Administration
+1975,5.506533168,Private,Capital
 1975,4.075765314,Private,Other Health Spending
+1976,1.00E-11,Private,Public Health
 1976,11.74353816,Private,Hospital
 1976,11.43123119,Private,Other Institutions
 1976,0.912932519,Private,Physicians
 1976,34.34717121,Private,Other Professionals
 1976,30.42768753,Private,Drugs
-1976,5.479485121,Private,Capital
-1976,1.00E-11,Private,Public Health
 1976,1.918613946,Private,Administration
+1976,5.479485121,Private,Capital
 1976,3.739340323,Private,Other Health Spending
+1977,1.00E-11,Private,Public Health
 1977,11.65242976,Private,Hospital
 1977,11.14420876,Private,Other Institutions
 1977,0.895793505,Private,Physicians
 1977,36.16622804,Private,Other Professionals
 1977,29.00793472,Private,Drugs
-1977,4.945233797,Private,Capital
-1977,1.00E-11,Private,Public Health
 1977,2.500972782,Private,Administration
+1977,4.945233797,Private,Capital
 1977,3.687198629,Private,Other Health Spending
+1978,1.00E-11,Private,Public Health
 1978,12.7902653,Private,Hospital
 1978,11.91111404,Private,Other Institutions
 1978,0.942847309,Private,Physicians
 1978,36.44947875,Private,Other Professionals
 1978,27.48348176,Private,Drugs
-1978,5.346111237,Private,Capital
-1978,1.00E-11,Private,Public Health
 1978,2.118949073,Private,Administration
+1978,5.346111237,Private,Capital
 1978,2.957752519,Private,Other Health Spending
+1979,1.00E-11,Private,Public Health
 1979,13.56885467,Private,Hospital
 1979,12.78499184,Private,Other Institutions
 1979,1.138461238,Private,Physicians
 1979,36.14136908,Private,Other Professionals
 1979,27.54783292,Private,Drugs
-1979,3.840514442,Private,Capital
-1979,1.00E-11,Private,Public Health
 1979,2.167816628,Private,Administration
+1979,3.840514442,Private,Capital
 1979,2.810159186,Private,Other Health Spending
+1980,1.00E-11,Private,Public Health
 1980,13.73057435,Private,Hospital
 1980,13.161593,Private,Other Institutions
 1980,0.94442939,Private,Physicians
 1980,34.72247257,Private,Other Professionals
 1980,26.01727157,Private,Drugs
-1980,6.514147837,Private,Capital
-1980,1.00E-11,Private,Public Health
 1980,2.146206828,Private,Administration
+1980,6.514147837,Private,Capital
 1980,2.763304456,Private,Other Health Spending
+1981,1.00E-11,Private,Public Health
 1981,14.26191671,Private,Hospital
 1981,11.73316294,Private,Other Institutions
 1981,0.784991971,Private,Physicians
 1981,33.86811973,Private,Other Professionals
 1981,27.86802394,Private,Drugs
-1981,5.988005748,Private,Capital
-1981,1.00E-11,Private,Public Health
 1981,2.94406035,Private,Administration
+1981,5.988005748,Private,Capital
 1981,2.551718612,Private,Other Health Spending
+1982,1.00E-11,Private,Public Health
 1982,14.91779459,Private,Hospital
 1982,11.67118023,Private,Other Institutions
 1982,0.925293544,Private,Physicians
 1982,34.67680787,Private,Other Professionals
 1982,26.74246383,Private,Drugs
-1982,6.689271231,Private,Capital
-1982,1.00E-11,Private,Public Health
 1982,2.005411605,Private,Administration
+1982,6.689271231,Private,Capital
 1982,2.371777093,Private,Other Health Spending
+1983,1.00E-11,Private,Public Health
 1983,15.61928922,Private,Hospital
 1983,11.90151853,Private,Other Institutions
 1983,0.997554013,Private,Physicians
 1983,35.45933596,Private,Other Professionals
 1983,26.83407078,Private,Drugs
-1983,4.666207781,Private,Capital
-1983,1.00E-11,Private,Public Health
 1983,2.170112295,Private,Administration
+1983,4.666207781,Private,Capital
 1983,2.351911421,Private,Other Health Spending
+1984,1.00E-11,Private,Public Health
 1984,16.03099031,Private,Hospital
 1984,11.29358191,Private,Other Institutions
 1984,0.925010742,Private,Physicians
 1984,35.49199662,Private,Other Professionals
 1984,26.98922808,Private,Drugs
-1984,4.145783306,Private,Capital
-1984,1.00E-11,Private,Public Health
 1984,2.848502079,Private,Administration
+1984,4.145783306,Private,Capital
 1984,2.274906954,Private,Other Health Spending
+1985,1.00E-11,Private,Public Health
 1985,15.62102364,Private,Hospital
 1985,10.66420741,Private,Other Institutions
 1985,0.857792132,Private,Physicians
 1985,36.0428405,Private,Other Professionals
 1985,27.53292562,Private,Drugs
-1985,4.251286537,Private,Capital
-1985,1.00E-11,Private,Public Health
 1985,2.762385058,Private,Administration
+1985,4.251286537,Private,Capital
 1985,2.267539103,Private,Other Health Spending
+1986,1.00E-11,Private,Public Health
 1986,15.729102,Private,Hospital
 1986,10.22245291,Private,Other Institutions
 1986,0.711622522,Private,Physicians
 1986,35.43373979,Private,Other Professionals
 1986,28.66080523,Private,Drugs
-1986,4.162407054,Private,Capital
-1986,1.00E-11,Private,Public Health
 1986,2.742034492,Private,Administration
+1986,4.162407054,Private,Capital
 1986,2.337835992,Private,Other Health Spending
+1987,1.00E-11,Private,Public Health
 1987,15.31411889,Private,Hospital
 1987,10.20217526,Private,Other Institutions
 1987,0.652992354,Private,Physicians
 1987,35.74024249,Private,Other Professionals
 1987,29.16563739,Private,Drugs
-1987,4.097130549,Private,Capital
-1987,1.00E-11,Private,Public Health
 1987,2.389925949,Private,Administration
+1987,4.097130549,Private,Capital
 1987,2.437777112,Private,Other Health Spending
+1988,1.00E-11,Private,Public Health
 1988,14.87238511,Private,Hospital
 1988,9.927546541,Private,Other Institutions
 1988,0.621967209,Private,Physicians
 1988,35.9916391,Private,Other Professionals
 1988,29.84356327,Private,Drugs
-1988,2.743062987,Private,Capital
-1988,1.00E-11,Private,Public Health
 1988,3.331192809,Private,Administration
+1988,2.743062987,Private,Capital
 1988,2.668642972,Private,Other Health Spending
+1989,1.00E-11,Private,Public Health
 1989,14.10814212,Private,Hospital
 1989,9.254949393,Private,Other Institutions
 1989,0.591968372,Private,Physicians
 1989,35.66830525,Private,Other Professionals
 1989,30.08714026,Private,Drugs
-1989,2.752304168,Private,Capital
-1989,1.00E-11,Private,Public Health
 1989,4.654285216,Private,Administration
+1989,2.752304168,Private,Capital
 1989,2.882905226,Private,Other Health Spending
+1990,1.00E-11,Private,Public Health
 1990,14.38209165,Private,Hospital
 1990,10.15201726,Private,Other Institutions
 1990,0.564042237,Private,Physicians
 1990,35.28380908,Private,Other Professionals
 1990,29.8678559,Private,Drugs
-1990,2.461120537,Private,Capital
-1990,1.00E-11,Private,Public Health
 1990,4.271516531,Private,Administration
+1990,2.461120537,Private,Capital
 1990,3.017546816,Private,Other Health Spending
+1991,1.00E-11,Private,Public Health
 1991,14.32186547,Private,Hospital
 1991,10.45903896,Private,Other Institutions
 1991,0.537798096,Private,Physicians
 1991,35.00674574,Private,Other Professionals
 1991,30.15657541,Private,Drugs
-1991,2.021096242,Private,Capital
-1991,1.00E-11,Private,Public Health
 1991,4.417348535,Private,Administration
+1991,2.021096242,Private,Capital
 1991,3.079531542,Private,Other Health Spending
+1992,1.00E-11,Private,Public Health
 1992,14.01156127,Private,Hospital
 1992,10.43442557,Private,Other Institutions
 1992,0.518029801,Private,Physicians
 1992,34.49207825,Private,Other Professionals
 1992,30.9760134,Private,Drugs
-1992,2.004781278,Private,Capital
-1992,1.00E-11,Private,Public Health
 1992,4.44452415,Private,Administration
+1992,2.004781278,Private,Capital
 1992,3.118586293,Private,Other Health Spending
+1993,1.00E-11,Private,Public Health
 1993,13.63761039,Private,Hospital
 1993,10.28130621,Private,Other Institutions
 1993,0.496773459,Private,Physicians
 1993,33.75975619,Private,Other Professionals
 1993,31.33454996,Private,Drugs
-1993,1.873143939,Private,Capital
-1993,1.00E-11,Private,Public Health
 1993,5.41442928,Private,Administration
+1993,1.873143939,Private,Capital
 1993,3.202430569,Private,Other Health Spending
+1994,1.00E-11,Private,Public Health
 1994,12.93157635,Private,Hospital
 1994,10.16809005,Private,Other Institutions
 1994,0.496698963,Private,Physicians
 1994,34.30327023,Private,Other Professionals
 1994,31.28852741,Private,Drugs
-1994,1.602214084,Private,Capital
-1994,1.00E-11,Private,Public Health
 1994,5.960697191,Private,Administration
+1994,1.602214084,Private,Capital
 1994,3.248925712,Private,Other Health Spending
+1995,1.00E-11,Private,Public Health
 1995,11.1464415,Private,Hospital
 1995,9.885540648,Private,Other Institutions
 1995,0.51037886,Private,Physicians
 1995,35.00432166,Private,Other Professionals
 1995,31.92383235,Private,Drugs
-1995,2.054947506,Private,Capital
-1995,1.00E-11,Private,Public Health
 1995,5.961959642,Private,Administration
+1995,2.054947506,Private,Capital
 1995,3.512577839,Private,Other Health Spending
+1996,1.00E-11,Private,Public Health
 1996,10.26033683,Private,Hospital
 1996,9.608887903,Private,Other Institutions
 1996,0.545205529,Private,Physicians
 1996,35.56730316,Private,Other Professionals
 1996,32.49603245,Private,Drugs
-1996,2.163501867,Private,Capital
-1996,1.00E-11,Private,Public Health
 1996,5.974551603,Private,Administration
+1996,2.163501867,Private,Capital
 1996,3.384180658,Private,Other Health Spending
+1997,1.00E-11,Private,Public Health
 1997,9.891507342,Private,Hospital
 1997,9.060128646,Private,Other Institutions
 1997,0.515539509,Private,Physicians
 1997,36.36686367,Private,Other Professionals
 1997,33.61207644,Private,Drugs
-1997,1.548177754,Private,Capital
-1997,1.00E-11,Private,Public Health
 1997,5.487794976,Private,Administration
+1997,1.548177754,Private,Capital
 1997,3.517911664,Private,Other Health Spending
+1998,1.00E-11,Private,Public Health
 1998,9.38100924,Private,Hospital
 1998,8.877606013,Private,Other Institutions
 1998,0.575551828,Private,Physicians
 1998,36.19049124,Private,Other Professionals
 1998,34.60089184,Private,Drugs
-1998,1.717013973,Private,Capital
-1998,1.00E-11,Private,Public Health
 1998,4.459389811,Private,Administration
+1998,1.717013973,Private,Capital
 1998,4.198046054,Private,Other Health Spending
+1999,1.00E-11,Private,Public Health
 1999,9.112909975,Private,Hospital
 1999,8.815063692,Private,Other Institutions
 1999,0.562760769,Private,Physicians
 1999,35.66098863,Private,Other Professionals
 1999,33.28794564,Private,Drugs
-1999,3.245334151,Private,Capital
-1999,1.00E-11,Private,Public Health
 1999,4.905148199,Private,Administration
+1999,3.245334151,Private,Capital
 1999,4.409848942,Private,Other Health Spending
+2000,1.00E-11,Private,Public Health
 2000,9.083488679,Private,Hospital
 2000,9.034182318,Private,Other Institutions
 2000,0.597693878,Private,Physicians
 2000,35.27116914,Private,Other Professionals
 2000,33.57617971,Private,Drugs
-2000,2.831429562,Private,Capital
-2000,1.00E-11,Private,Public Health
 2000,5.162515904,Private,Administration
+2000,2.831429562,Private,Capital
 2000,4.443340805,Private,Other Health Spending
+2001,1.00E-11,Private,Public Health
 2001,9.081152512,Private,Hospital
 2001,8.442630196,Private,Other Institutions
 2001,0.460856384,Private,Physicians
 2001,35.15276033,Private,Other Professionals
 2001,33.02304976,Private,Drugs
-2001,3.37961959,Private,Capital
-2001,1.00E-11,Private,Public Health
 2001,6.177259855,Private,Administration
+2001,3.37961959,Private,Capital
 2001,4.282671373,Private,Other Health Spending
+2002,1.00E-11,Private,Public Health
 2002,9.330342162,Private,Hospital
 2002,8.373969125,Private,Other Institutions
 2002,0.739083946,Private,Physicians
 2002,33.84561178,Private,Other Professionals
 2002,33.08527281,Private,Drugs
-2002,3.506670857,Private,Capital
-2002,1.00E-11,Private,Public Health
 2002,6.556186894,Private,Administration
+2002,3.506670857,Private,Capital
 2002,4.562862432,Private,Other Health Spending
+2003,1.00E-11,Private,Public Health
 2003,8.98703855,Private,Hospital
 2003,8.340283756,Private,Other Institutions
 2003,0.531216193,Private,Physicians
 2003,32.53800704,Private,Other Professionals
 2003,34.05976452,Private,Drugs
-2003,3.844668884,Private,Capital
-2003,1.00E-11,Private,Public Health
 2003,7.03618159,Private,Administration
+2003,3.844668884,Private,Capital
 2003,4.662839468,Private,Other Health Spending
+2004,1.00E-11,Private,Public Health
 2004,9.183637079,Private,Hospital
 2004,9.04953399,Private,Other Institutions
 2004,0.588159337,Private,Physicians
 2004,32.9011217,Private,Other Professionals
 2004,34.22488213,Private,Drugs
-2004,2.781681738,Private,Capital
-2004,1.00E-11,Private,Public Health
 2004,6.95469912,Private,Administration
+2004,2.781681738,Private,Capital
 2004,4.31628491,Private,Other Health Spending
+2005,1.00E-11,Private,Public Health
 2005,9.142111926,Private,Hospital
 2005,8.554758099,Private,Other Institutions
 2005,0.605544408,Private,Physicians
 2005,33.52293889,Private,Other Professionals
 2005,34.06155341,Private,Drugs
-2005,3.529895756,Private,Capital
-2005,1.00E-11,Private,Public Health
 2005,6.234244187,Private,Administration
+2005,3.529895756,Private,Capital
 2005,4.348953325,Private,Other Health Spending
+2006,1.00E-11,Private,Public Health
 2006,8.70460792,Private,Hospital
 2006,9.043126944,Private,Other Institutions
 2006,0.665733357,Private,Physicians
 2006,33.11169413,Private,Other Professionals
 2006,33.89680677,Private,Drugs
-2006,4.500292404,Private,Capital
-2006,1.00E-11,Private,Public Health
 2006,5.649346932,Private,Administration
+2006,4.500292404,Private,Capital
 2006,4.428391546,Private,Other Health Spending
+2007,1.00E-11,Private,Public Health
 2007,8.705164279,Private,Hospital
 2007,9.407383698,Private,Other Institutions
 2007,0.511280522,Private,Physicians
 2007,33.70178575,Private,Other Professionals
 2007,34.05721502,Private,Drugs
-2007,3.24659336,Private,Capital
-2007,1.00E-11,Private,Public Health
 2007,5.935387883,Private,Administration
+2007,3.24659336,Private,Capital
 2007,4.435189489,Private,Other Health Spending
+2008,1.00E-11,Private,Public Health
 2008,8.782377338,Private,Hospital
 2008,9.412903502,Private,Other Institutions
 2008,0.770957169,Private,Physicians
 2008,33.90503646,Private,Other Professionals
 2008,33.87459015,Private,Drugs
-2008,2.777505457,Private,Capital
-2008,1.00E-11,Private,Public Health
 2008,6.214280875,Private,Administration
+2008,2.777505457,Private,Capital
 2008,4.262349054,Private,Other Health Spending
+2009,1.00E-11,Private,Public Health
 2009,9.149947158,Private,Hospital
 2009,9.839069852,Private,Other Institutions
 2009,0.751398465,Private,Physicians
 2009,33.27630117,Private,Other Professionals
 2009,34.07072871,Private,Drugs
-2009,2.865624196,Private,Capital
-2009,1.00E-11,Private,Public Health
 2009,5.926371775,Private,Administration
+2009,2.865624196,Private,Capital
 2009,4.120558666,Private,Other Health Spending
+2010,1.00E-11,Private,Public Health
 2010,9.012610729,Private,Hospital
 2010,9.778051635,Private,Other Institutions
 2010,0.510945666,Private,Physicians
 2010,30.03628006,Private,Other Professionals
 2010,36.20052035,Private,Drugs
-2010,3.602411802,Private,Capital
-2010,1.00E-11,Private,Public Health
 2010,5.861080668,Private,Administration
+2010,3.602411802,Private,Capital
 2010,4.998099089,Private,Other Health Spending
+2011,1.00E-11,Private,Public Health
 2011,8.935819393,Private,Hospital
 2011,9.787315151,Private,Other Institutions
 2011,0.668917287,Private,Physicians
 2011,29.86368907,Private,Other Professionals
 2011,35.99517638,Private,Drugs
-2011,3.471244314,Private,Capital
-2011,1.00E-11,Private,Public Health
 2011,6.204499849,Private,Administration
+2011,3.471244314,Private,Capital
 2011,5.073338556,Private,Other Health Spending
+2012,1.00E-11,Private,Public Health
 2012,9.214033776,Private,Hospital
 2012,9.907945721,Private,Other Institutions
 2012,0.748114832,Private,Physicians
 2012,30.64514257,Private,Other Professionals
 2012,35.26653041,Private,Drugs
-2012,3.570115225,Private,Capital
-2012,1.00E-11,Private,Public Health
 2012,5.833404143,Private,Administration
+2012,3.570115225,Private,Capital
 2012,4.814713315,Private,Other Health Spending
+2013,1.00E-11,Private,Public Health
 2013,9.612808686,Private,Hospital
 2013,10.44164354,Private,Other Institutions
 2013,0.644496212,Private,Physicians
 2013,30.8497683,Private,Other Professionals
 2013,34.82486767,Private,Drugs
-2013,2.254942261,Private,Capital
-2013,1.00E-11,Private,Public Health
 2013,5.971218799,Private,Administration
+2013,2.254942261,Private,Capital
 2013,5.400254529,Private,Other Health Spending
+2014,1.00E-11,Private,Public Health
 2014,9.607402773,Private,Hospital
 2014,10.67961142,Private,Other Institutions
 2014,0.653055433,Private,Physicians
 2014,30.92486121,Private,Other Professionals
 2014,34.22713389,Private,Drugs
-2014,2.714489991,Private,Capital
-2014,1.00E-11,Private,Public Health
 2014,5.793157619,Private,Administration
+2014,2.714489991,Private,Capital
 2014,5.400287663,Private,Other Health Spending
+2015,1.00E-11,Private,Public Health
 2015,9.69748558,Private,Hospital
 2015,10.8253158,Private,Other Institutions
 2015,0.699902553,Private,Physicians
 2015,31.13401203,Private,Other Professionals
 2015,34.02765323,Private,Drugs
-2015,2.442130915,Private,Capital
-2015,1.00E-11,Private,Public Health
 2015,5.65300089,Private,Administration
+2015,2.442130915,Private,Capital
 2015,5.520498996,Private,Other Health Spending
+1975,4.374253549,Public,Public Health
 1975,55.23259019,Public,Hospital
 1975,8.565538147,Public,Other Institutions
 1975,19.49569716,Public,Physicians
 1975,1.494304427,Public,Other Professionals
 1975,1.704917312,Public,Drugs
-1975,4.047523995,Public,Capital
-1975,4.374253549,Public,Public Health
 1975,2.917839961,Public,Administration
+1975,4.047523995,Public,Capital
 1975,2.167335256,Public,Other Health Spending
+1976,4.72039806,Public,Public Health
 1976,55.26090699,Public,Hospital
 1976,9.236074761,Public,Other Institutions
 1976,18.87288892,Public,Physicians
 1976,1.51959068,Public,Other Professionals
 1976,1.995355708,Public,Drugs
-1976,3.392487935,Public,Capital
-1976,4.72039806,Public,Public Health
 1976,2.772401335,Public,Administration
+1976,3.392487935,Public,Capital
 1976,2.229895616,Public,Other Health Spending
+1977,5.053001258,Public,Public Health
 1977,53.80299917,Public,Hospital
 1977,9.921522852,Public,Other Institutions
 1977,19.01395442,Public,Physicians
 1977,1.596505786,Public,Other Professionals
 1977,2.250471342,Public,Drugs
-1977,3.254158795,Public,Capital
-1977,5.053001258,Public,Public Health
 1977,2.686007937,Public,Administration
+1977,3.254158795,Public,Capital
 1977,2.421378448,Public,Other Health Spending
+1978,4.719112428,Public,Public Health
 1978,52.61999213,Public,Hospital
 1978,10.48661889,Public,Other Institutions
 1978,19.38836358,Public,Physicians
 1978,1.774427721,Public,Other Professionals
 1978,2.514787038,Public,Drugs
-1978,3.487766952,Public,Capital
-1978,4.719112428,Public,Public Health
 1978,2.4582674,Public,Administration
+1978,3.487766952,Public,Capital
 1978,2.550663856,Public,Other Health Spending
+1979,4.858286032,Public,Public Health
 1979,51.45322841,Public,Hospital
 1979,10.86684922,Public,Other Institutions
 1979,19.27178064,Public,Physicians
 1979,1.997606225,Public,Other Professionals
 1979,2.655302064,Public,Drugs
-1979,3.764506505,Public,Capital
-1979,4.858286032,Public,Public Health
 1979,2.416876777,Public,Administration
+1979,3.764506505,Public,Capital
 1979,2.715564132,Public,Other Health Spending
+1980,5.019442659,Public,Public Health
 1980,50.97516918,Public,Hospital
 1980,10.81519688,Public,Other Institutions
 1980,19.21390699,Public,Physicians
 1980,2.17949151,Public,Other Professionals
 1980,2.761038543,Public,Drugs
-1980,3.772119686,Public,Capital
-1980,5.019442659,Public,Public Health
 1980,2.346558659,Public,Administration
+1980,3.772119686,Public,Capital
 1980,2.917075896,Public,Other Health Spending
+1981,5.045024869,Public,Public Health
 1981,50.78251658,Public,Hospital
 1981,10.76420338,Public,Other Institutions
 1981,18.9299374,Public,Physicians
 1981,2.42625991,Public,Other Professionals
 1981,2.842476792,Public,Drugs
-1981,3.670084897,Public,Capital
-1981,5.045024869,Public,Public Health
 1981,2.231493268,Public,Administration
+1981,3.670084897,Public,Capital
 1981,3.308002908,Public,Other Health Spending
+1982,4.903427003,Public,Public Health
 1982,51.18781467,Public,Hospital
 1982,10.79618332,Public,Other Institutions
 1982,18.56600169,Public,Physicians
 1982,2.150290764,Public,Other Professionals
 1982,2.915481893,Public,Drugs
-1982,3.862762311,Public,Capital
-1982,4.903427003,Public,Public Health
 1982,2.331289455,Public,Administration
+1982,3.862762311,Public,Capital
 1982,3.286748899,Public,Other Health Spending
+1983,4.760034258,Public,Public Health
 1983,50.5158782,Public,Hospital
 1983,10.71461036,Public,Other Institutions
 1983,19.069385,Public,Physicians
 1983,2.033477218,Public,Other Professionals
 1983,3.134068167,Public,Drugs
-1983,4.084519519,Public,Capital
-1983,4.760034258,Public,Public Health
 1983,2.265826628,Public,Administration
+1983,4.084519519,Public,Capital
 1983,3.422200645,Public,Other Health Spending
+1984,4.923609713,Public,Public Health
 1984,49.84929157,Public,Hospital
 1984,10.45630086,Public,Other Institutions
 1984,19.47490904,Public,Physicians
 1984,2.022492735,Public,Other Professionals
 1984,3.372512928,Public,Drugs
-1984,4.077261133,Public,Capital
-1984,4.923609713,Public,Public Health
 1984,2.315512548,Public,Administration
+1984,4.077261133,Public,Capital
 1984,3.508109472,Public,Other Health Spending
+1985,5.036366353,Public,Public Health
 1985,48.96992376,Public,Hospital
 1985,10.18908289,Public,Other Institutions
 1985,19.81047171,Public,Physicians
 1985,2.061835836,Public,Other Professionals
 1985,3.717201627,Public,Drugs
-1985,4.109838909,Public,Capital
-1985,5.036366353,Public,Public Health
 1985,2.31533508,Public,Administration
+1985,4.109838909,Public,Capital
 1985,3.789943848,Public,Other Health Spending
+1986,4.826887595,Public,Public Health
 1986,48.99272812,Public,Hospital
 1986,9.1684162,Public,Other Institutions
 1986,20.28283342,Public,Physicians
 1986,2.133061934,Public,Other Professionals
 1986,4.055424209,Public,Drugs
-1986,4.154829272,Public,Capital
-1986,4.826887595,Public,Public Health
 1986,2.256984311,Public,Administration
+1986,4.154829272,Public,Capital
 1986,4.128834941,Public,Other Health Spending
+1987,4.738118704,Public,Public Health
 1987,48.93414031,Public,Hospital
 1987,8.934584961,Public,Other Institutions
 1987,20.72766623,Public,Physicians
 1987,2.053663287,Public,Other Professionals
 1987,4.258086302,Public,Drugs
-1987,3.968146873,Public,Capital
-1987,4.738118704,Public,Public Health
 1987,2.224028123,Public,Administration
+1987,3.968146873,Public,Capital
 1987,4.161565219,Public,Other Health Spending
+1988,4.681341098,Public,Public Health
 1988,48.4680172,Public,Hospital
 1988,9.087939582,Public,Other Institutions
 1988,20.60208134,Public,Physicians
 1988,2.065185319,Public,Other Professionals
 1988,4.461887247,Public,Drugs
-1988,4.063301511,Public,Capital
-1988,4.681341098,Public,Public Health
 1988,2.094259924,Public,Administration
+1988,4.063301511,Public,Capital
 1988,4.475986783,Public,Other Health Spending
+1989,4.661188269,Public,Public Health
 1989,48.36093101,Public,Hospital
 1989,9.13465514,Public,Other Institutions
 1989,20.09622567,Public,Physicians
 1989,2.141210704,Public,Other Professionals
 1989,4.702400689,Public,Drugs
-1989,4.061888228,Public,Capital
-1989,4.661188269,Public,Public Health
 1989,2.06335742,Public,Administration
+1989,4.061888228,Public,Capital
 1989,4.778142866,Public,Other Health Spending
+1990,4.902475691,Public,Public Health
 1990,45.10114873,Public,Hospital
 1990,11.20588548,Public,Other Institutions
 1990,19.97311425,Public,Physicians
 1990,2.169343987,Public,Other Professionals
 1990,5.004339814,Public,Drugs
-1990,3.823502458,Public,Capital
-1990,4.902475691,Public,Public Health
 1990,2.249531782,Public,Administration
+1990,3.823502458,Public,Capital
 1990,5.570657805,Public,Other Health Spending
+1991,4.877410753,Public,Public Health
 1991,43.97942753,Public,Hospital
 1991,11.84785457,Public,Other Institutions
 1991,20.2187207,Public,Physicians
 1991,2.213427597,Public,Other Professionals
 1991,5.258411891,Public,Drugs
-1991,3.403547604,Public,Capital
-1991,4.877410753,Public,Public Health
 1991,2.106043305,Public,Administration
+1991,3.403547604,Public,Capital
 1991,6.095156044,Public,Other Health Spending
+1992,4.983967599,Public,Public Health
 1992,43.77977845,Public,Hospital
 1992,12.08661975,Public,Other Institutions
 1992,19.80918744,Public,Physicians
 1992,2.179206075,Public,Other Professionals
 1992,5.614204875,Public,Drugs
-1992,3.275642847,Public,Capital
-1992,4.983967599,Public,Public Health
 1992,2.04549615,Public,Administration
+1992,3.275642847,Public,Capital
 1992,6.22589681,Public,Other Health Spending
+1993,5.181921402,Public,Public Health
 1993,43.54758008,Public,Hospital
 1993,11.91809095,Public,Other Institutions
 1993,19.84228185,Public,Physicians
 1993,2.113242664,Public,Other Professionals
 1993,5.855891047,Public,Drugs
-1993,3.177104021,Public,Capital
-1993,5.181921402,Public,Public Health
 1993,2.064475796,Public,Administration
+1993,3.177104021,Public,Capital
 1993,6.299412181,Public,Other Health Spending
+1994,5.649784809,Public,Public Health
 1994,42.02083157,Public,Hospital
 1994,11.91654757,Public,Other Institutions
 1994,20.03079217,Public,Physicians
 1994,2.0329894,Public,Other Professionals
 1994,5.869726856,Public,Drugs
-1994,3.695265463,Public,Capital
-1994,5.649784809,Public,Public Health
 1994,2.212514902,Public,Administration
+1994,3.695265463,Public,Capital
 1994,6.571547261,Public,Other Health Spending
+1995,5.933209269,Public,Public Health
 1995,41.32889069,Public,Hospital
 1995,12.29137234,Public,Other Institutions
 1995,19.8733905,Public,Physicians
 1995,1.953735832,Public,Other Professionals
 1995,6.36720097,Public,Drugs
-1995,3.450111792,Public,Capital
-1995,5.933209269,Public,Public Health
 1995,2.219115166,Public,Administration
+1995,3.450111792,Public,Capital
 1995,6.582973443,Public,Other Health Spending
+1996,6.164447151,Public,Public Health
 1996,41.37022351,Public,Hospital
 1996,12.39615296,Public,Other Institutions
 1996,20.03279677,Public,Physicians
 1996,1.875178829,Public,Other Professionals
 1996,6.265101706,Public,Drugs
-1996,3.170744628,Public,Capital
-1996,6.164447151,Public,Public Health
 1996,2.171374132,Public,Administration
+1996,3.170744628,Public,Capital
 1996,6.55398032,Public,Other Health Spending
+1997,6.196360016,Public,Public Health
 1997,40.40598089,Public,Hospital
 1997,12.37888506,Public,Other Institutions
 1997,20.1119896,Public,Physicians
 1997,1.862832515,Public,Other Professionals
 1997,6.518532578,Public,Drugs
-1997,3.183659125,Public,Capital
-1997,6.196360016,Public,Public Health
 1997,2.204407959,Public,Administration
+1997,3.183659125,Public,Capital
 1997,7.137352271,Public,Other Health Spending
+1998,7.259375401,Public,Public Health
 1998,39.76787832,Public,Hospital
 1998,12.12193248,Public,Other Institutions
 1998,19.65179252,Public,Physicians
 1998,1.754324754,Public,Other Professionals
 1998,6.772973845,Public,Drugs
-1998,3.16715599,Public,Capital
-1998,7.259375401,Public,Public Health
 1998,2.271468345,Public,Administration
+1998,3.16715599,Public,Capital
 1998,7.233098344,Public,Other Health Spending
+1999,6.982616966,Public,Public Health
 1999,39.1100885,Public,Hospital
 1999,11.97494381,Public,Other Institutions
 1999,19.36449422,Public,Physicians
 1999,1.774487215,Public,Other Professionals
 1999,7.191444262,Public,Drugs
-1999,4.150582096,Public,Capital
-1999,6.982616966,Public,Public Health
 1999,2.292600773,Public,Administration
+1999,4.150582096,Public,Capital
 1999,7.15874216,Public,Other Health Spending
+2000,7.067982564,Public,Public Health
 2000,38.90419433,Public,Hospital
 2000,11.79497905,Public,Other Institutions
 2000,18.83160241,Public,Physicians
 2000,1.739938555,Public,Other Professionals
 2000,7.643834936,Public,Drugs
-2000,4.525350203,Public,Capital
-2000,7.067982564,Public,Public Health
 2000,2.303193301,Public,Administration
+2000,4.525350203,Public,Capital
 2000,7.188924657,Public,Other Health Spending
+2001,7.470547676,Public,Public Health
 2001,38.14458406,Public,Hospital
 2001,11.71489066,Public,Other Institutions
 2001,18.67248816,Public,Physicians
 2001,1.618692977,Public,Other Professionals
 2001,8.096449796,Public,Drugs
-2001,4.560818274,Public,Capital
-2001,7.470547676,Public,Public Health
 2001,2.321939657,Public,Administration
+2001,4.560818274,Public,Capital
 2001,7.399588736,Public,Other Health Spending
+2002,7.276545779,Public,Public Health
 2002,38.38463543,Public,Hospital
 2002,11.64846964,Public,Other Institutions
 2002,18.69553677,Public,Physicians
 2002,1.480175618,Public,Other Professionals
 2002,8.53028193,Public,Drugs
-2002,4.630930058,Public,Capital
-2002,7.276545779,Public,Public Health
 2002,2.336106799,Public,Administration
+2002,4.630930058,Public,Capital
 2002,7.017317968,Public,Other Health Spending
+2003,7.937876932,Public,Public Health
 2003,37.98981312,Public,Hospital
 2003,11.36930631,Public,Other Institutions
 2003,18.58045251,Public,Physicians
 2003,1.363416345,Public,Other Professionals
 2003,8.750544684,Public,Drugs
-2003,4.830393602,Public,Capital
-2003,7.937876932,Public,Public Health
 2003,2.355942338,Public,Administration
+2003,4.830393602,Public,Capital
 2003,6.822254159,Public,Other Health Spending
+2004,7.581258286,Public,Public Health
 2004,38.30230534,Public,Hospital
 2004,11.5485517,Public,Other Institutions
 2004,18.56159147,Public,Physicians
 2004,1.310547917,Public,Other Professionals
 2004,8.987355431,Public,Drugs
-2004,4.793452184,Public,Capital
-2004,7.581258286,Public,Public Health
 2004,2.335565694,Public,Administration
+2004,4.793452184,Public,Capital
 2004,6.579371979,Public,Other Health Spending
+2005,7.952744117,Public,Public Health
 2005,37.74894395,Public,Hospital
 2005,11.25981735,Public,Other Institutions
 2005,18.62561859,Public,Physicians
 2005,1.163262888,Public,Other Professionals
 2005,9.080723718,Public,Drugs
-2005,5.206895367,Public,Capital
-2005,7.952744117,Public,Public Health
 2005,2.393095417,Public,Administration
+2005,5.206895367,Public,Capital
 2005,6.568898602,Public,Other Health Spending
+2006,8.067120014,Public,Public Health
 2006,37.81008409,Public,Hospital
 2006,11.04551476,Public,Other Institutions
 2006,18.80993046,Public,Physicians
 2006,1.161132205,Public,Other Professionals
 2006,9.142252669,Public,Drugs
-2006,4.94056757,Public,Capital
-2006,8.067120014,Public,Public Health
 2006,2.299072741,Public,Administration
+2006,4.94056757,Public,Capital
 2006,6.724325493,Public,Other Health Spending
+2007,8.05813425,Public,Public Health
 2007,37.69145397,Public,Hospital
 2007,10.84948152,Public,Other Institutions
 2007,18.96259749,Public,Physicians
 2007,1.177902439,Public,Other Professionals
 2007,9.027217199,Public,Drugs
-2007,5.076459531,Public,Capital
-2007,8.05813425,Public,Public Health
 2007,2.288614148,Public,Administration
+2007,5.076459531,Public,Capital
 2007,6.868139451,Public,Other Health Spending
+2008,7.821981747,Public,Public Health
 2008,37.36971686,Public,Hospital
 2008,10.55812913,Public,Other Institutions
 2008,19.28090142,Public,Physicians
 2008,1.212269564,Public,Other Professionals
 2008,8.853507112,Public,Drugs
-2008,5.573362012,Public,Capital
-2008,7.821981747,Public,Public Health
 2008,2.041896473,Public,Administration
+2008,5.573362012,Public,Capital
 2008,7.288235686,Public,Other Health Spending
+2009,7.608990796,Public,Public Health
 2009,37.41148692,Public,Hospital
 2009,10.59501857,Public,Other Institutions
 2009,19.58856539,Public,Physicians
 2009,1.256199805,Public,Other Professionals
 2009,8.907324412,Public,Drugs
-2009,5.612285633,Public,Capital
-2009,7.608990796,Public,Public Health
 2009,1.94133267,Public,Administration
+2009,5.612285633,Public,Capital
 2009,7.07879581,Public,Other Health Spending
+2010,7.237223119,Public,Public Health
 2010,37.91566104,Public,Hospital
 2010,10.58924484,Public,Other Institutions
 2010,19.95698277,Public,Physicians
 2010,1.250696571,Public,Other Professionals
 2010,8.625828499,Public,Drugs
-2010,5.911906292,Public,Capital
-2010,7.237223119,Public,Public Health
 2010,1.815645304,Public,Administration
+2010,5.911906292,Public,Capital
 2010,6.696811563,Public,Other Health Spending
+2011,7.354564845,Public,Public Health
 2011,38.13239346,Public,Hospital
 2011,10.44951539,Public,Other Institutions
 2011,20.49216473,Public,Physicians
 2011,1.258039349,Public,Other Professionals
 2011,8.509831945,Public,Drugs
-2011,5.536740251,Public,Capital
-2011,7.354564845,Public,Public Health
 2011,1.775283545,Public,Administration
+2011,5.536740251,Public,Capital
 2011,6.491466481,Public,Other Health Spending
+2012,7.48776837,Public,Public Health
 2012,38.13962711,Public,Hospital
 2012,10.38168899,Public,Other Institutions
 2012,20.59471487,Public,Physicians
 2012,1.30197097,Public,Other Professionals
 2012,8.261688354,Public,Drugs
-2012,5.603711141,Public,Capital
-2012,7.48776837,Public,Public Health
 2012,1.815830358,Public,Administration
+2012,5.603711141,Public,Capital
 2012,6.412999839,Public,Other Health Spending
+2013,7.673715519,Public,Public Health
 2013,38.13001939,Public,Hospital
 2013,10.48756574,Public,Other Institutions
 2013,21.12012351,Public,Physicians
 2013,1.25515923,Public,Other Professionals
 2013,8.130227542,Public,Drugs
-2013,5.025855703,Public,Capital
-2013,7.673715519,Public,Public Health
 2013,1.80883596,Public,Administration
+2013,5.025855703,Public,Capital
 2013,6.368497399,Public,Other Health Spending
+2014,7.663490721,Public,Public Health
 2014,37.64513593,Public,Hospital
 2014,10.45293282,Public,Other Institutions
 2014,21.25138092,Public,Physicians
 2014,1.23039656,Public,Other Professionals
 2014,8.049775485,Public,Drugs
-2014,5.539980014,Public,Capital
-2014,7.663490721,Public,Public Health
 2014,1.767985032,Public,Administration
+2014,5.539980014,Public,Capital
 2014,6.398922524,Public,Other Health Spending
+2015,7.781053559,Public,Public Health
 2015,37.76494048,Public,Hospital
 2015,10.59770733,Public,Other Institutions
 2015,21.61112888,Public,Physicians
 2015,1.249577222,Public,Other Professionals
 2015,8.127967615,Public,Drugs
-2015,4.6199822,Public,Capital
-2015,7.781053559,Public,Public Health
 2015,1.760120356,Public,Administration
+2015,4.6199822,Public,Capital
 2015,6.487522354,Public,Other Health Spending

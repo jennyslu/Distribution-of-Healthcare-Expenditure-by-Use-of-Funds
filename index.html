@@ -22,8 +22,8 @@
 <script src="js/colorbrewer.min.js"></script>
 <script type="text/javascript">
 //~~~~~USER SETTINGS~~~~~
-var USER_DEMO = 'Private';
-var USER_CAUSE = null;
+var USER_FILTER = 'Private';
+var USER_SELECT = null;
 
 //~~~~~MARGINS~~~~~
 //define margin object according to d3.js conventions
@@ -47,7 +47,7 @@ var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
     .tickFormat(function(d) { return numFormatter(d); });
-//define y-axis formate as percentage eg. 100%
+//define y-axis, format as percentage eg. 100%
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
@@ -135,14 +135,14 @@ function draw(error, data) {
 	if (error) throw error;
 
 	//filter data by sector depending on user selection
-	var filtered = data.filter(function(d) { return d.sector === USER_DEMO; });
+	var filtered = data.filter(function(d) { return d.sector === USER_FILTER; });
 	//call stack on filtered and nested data
 	var layers = stack(nest.entries(filtered));
 
 	//set domains for x, y, and colour scales
 	x.domain(d3.extent(filtered, function(d) { return d.year; }));
 	y.domain([0, d3.max(filtered, function(d) { return d.y0 + d.y; })]);
-
+	
 	//join data with current selection (layer class elements)
 	//.enter() returns ENTER selection = placeholder nodes for each element with no DOM element
 	//append new <path> element as last child of each element in ENTER selection
@@ -156,7 +156,7 @@ function draw(error, data) {
 	    .attr("class", "layer")
 	    .attr("id", function(d) { return d.key; })
 	    .attr("d", function(d) { return area(d.values); })
-	    .style("fill", function(d, i) { return colour(d.key); });
+	    .style("fill", function(d) { return colour(d.key); });
 
 	//add axes
 	svg.append("g")
@@ -168,13 +168,19 @@ function draw(error, data) {
         .call(yAxis);
 
     //another data join to add labels for each layer
+    //don't show "Public Health" label if user selects "Private" sector since spending is 0
     var layer_label = svg.selectAll(".layerlabel")
 	    .data(layers)
 	  .enter().append("text")
 	    .attr("class", "layerlabel")
-	    .attr("transform", "translate(" + x(2010) + ",0)");
-
-
+	    .attr("transform", function (d) {
+	    	return "translate(" + x(2010) + "," + y(d.values[35].y0 + d.values[35].y/2) + ")"; })
+    	.attr("dy", "0.5em")
+    	.text(function (d) { 
+    		if (USER_FILTER === "Private" && d.key === "Public Health") {
+    			return ""; }
+    		else {
+    			return d.key; }});
 }
 </script>
 </body>

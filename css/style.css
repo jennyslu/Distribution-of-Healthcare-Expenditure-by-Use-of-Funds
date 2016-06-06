@@ -100,7 +100,7 @@ path.layer:hover {
 }
 
 .layerlabel {
-	fill: #fff;
+	fill: #404040;
 	text-anchor: middle;
 	
 	/* No select */
