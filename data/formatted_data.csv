@@ -5,7 +5,7 @@ year,prop,sector,use
 1975,33.01714112,Private,Other Professionals
 1975,31.689866,Private,Drugs
 1975,5.506533168,Private,Capital
-1975,---,Private,Public Health
+1975,1.00E-11,Private,Public Health
 1975,2.49028578,Private,Administration
 1975,4.075765314,Private,Other Health Spending
 1976,11.74353816,Private,Hospital
@@ -14,7 +14,7 @@ year,prop,sector,use
 1976,34.34717121,Private,Other Professionals
 1976,30.42768753,Private,Drugs
 1976,5.479485121,Private,Capital
-1976,---,Private,Public Health
+1976,1.00E-11,Private,Public Health
 1976,1.918613946,Private,Administration
 1976,3.739340323,Private,Other Health Spending
 1977,11.65242976,Private,Hospital
@@ -23,7 +23,7 @@ year,prop,sector,use
 1977,36.16622804,Private,Other Professionals
 1977,29.00793472,Private,Drugs
 1977,4.945233797,Private,Capital
-1977,---,Private,Public Health
+1977,1.00E-11,Private,Public Health
 1977,2.500972782,Private,Administration
 1977,3.687198629,Private,Other Health Spending
 1978,12.7902653,Private,Hospital
@@ -32,7 +32,7 @@ year,prop,sector,use
 1978,36.44947875,Private,Other Professionals
 1978,27.48348176,Private,Drugs
 1978,5.346111237,Private,Capital
-1978,---,Private,Public Health
+1978,1.00E-11,Private,Public Health
 1978,2.118949073,Private,Administration
 1978,2.957752519,Private,Other Health Spending
 1979,13.56885467,Private,Hospital
@@ -41,7 +41,7 @@ year,prop,sector,use
 1979,36.14136908,Private,Other Professionals
 1979,27.54783292,Private,Drugs
 1979,3.840514442,Private,Capital
-1979,---,Private,Public Health
+1979,1.00E-11,Private,Public Health
 1979,2.167816628,Private,Administration
 1979,2.810159186,Private,Other Health Spending
 1980,13.73057435,Private,Hospital
@@ -50,7 +50,7 @@ year,prop,sector,use
 1980,34.72247257,Private,Other Professionals
 1980,26.01727157,Private,Drugs
 1980,6.514147837,Private,Capital
-1980,---,Private,Public Health
+1980,1.00E-11,Private,Public Health
 1980,2.146206828,Private,Administration
 1980,2.763304456,Private,Other Health Spending
 1981,14.26191671,Private,Hospital
@@ -59,7 +59,7 @@ year,prop,sector,use
 1981,33.86811973,Private,Other Professionals
 1981,27.86802394,Private,Drugs
 1981,5.988005748,Private,Capital
-1981,---,Private,Public Health
+1981,1.00E-11,Private,Public Health
 1981,2.94406035,Private,Administration
 1981,2.551718612,Private,Other Health Spending
 1982,14.91779459,Private,Hospital
@@ -68,7 +68,7 @@ year,prop,sector,use
 1982,34.67680787,Private,Other Professionals
 1982,26.74246383,Private,Drugs
 1982,6.689271231,Private,Capital
-1982,---,Private,Public Health
+1982,1.00E-11,Private,Public Health
 1982,2.005411605,Private,Administration
 1982,2.371777093,Private,Other Health Spending
 1983,15.61928922,Private,Hospital
@@ -77,7 +77,7 @@ year,prop,sector,use
 1983,35.45933596,Private,Other Professionals
 1983,26.83407078,Private,Drugs
 1983,4.666207781,Private,Capital
-1983,---,Private,Public Health
+1983,1.00E-11,Private,Public Health
 1983,2.170112295,Private,Administration
 1983,2.351911421,Private,Other Health Spending
 1984,16.03099031,Private,Hospital
@@ -86,7 +86,7 @@ year,prop,sector,use
 1984,35.49199662,Private,Other Professionals
 1984,26.98922808,Private,Drugs
 1984,4.145783306,Private,Capital
-1984,---,Private,Public Health
+1984,1.00E-11,Private,Public Health
 1984,2.848502079,Private,Administration
 1984,2.274906954,Private,Other Health Spending
 1985,15.62102364,Private,Hospital
@@ -95,7 +95,7 @@ year,prop,sector,use
 1985,36.0428405,Private,Other Professionals
 1985,27.53292562,Private,Drugs
 1985,4.251286537,Private,Capital
-1985,---,Private,Public Health
+1985,1.00E-11,Private,Public Health
 1985,2.762385058,Private,Administration
 1985,2.267539103,Private,Other Health Spending
 1986,15.729102,Private,Hospital
@@ -104,7 +104,7 @@ year,prop,sector,use
 1986,35.43373979,Private,Other Professionals
 1986,28.66080523,Private,Drugs
 1986,4.162407054,Private,Capital
-1986,---,Private,Public Health
+1986,1.00E-11,Private,Public Health
 1986,2.742034492,Private,Administration
 1986,2.337835992,Private,Other Health Spending
 1987,15.31411889,Private,Hospital
@@ -113,7 +113,7 @@ year,prop,sector,use
 1987,35.74024249,Private,Other Professionals
 1987,29.16563739,Private,Drugs
 1987,4.097130549,Private,Capital
-1987,---,Private,Public Health
+1987,1.00E-11,Private,Public Health
 1987,2.389925949,Private,Administration
 1987,2.437777112,Private,Other Health Spending
 1988,14.87238511,Private,Hospital
@@ -122,7 +122,7 @@ year,prop,sector,use
 1988,35.9916391,Private,Other Professionals
 1988,29.84356327,Private,Drugs
 1988,2.743062987,Private,Capital
-1988,---,Private,Public Health
+1988,1.00E-11,Private,Public Health
 1988,3.331192809,Private,Administration
 1988,2.668642972,Private,Other Health Spending
 1989,14.10814212,Private,Hospital
@@ -131,7 +131,7 @@ year,prop,sector,use
 1989,35.66830525,Private,Other Professionals
 1989,30.08714026,Private,Drugs
 1989,2.752304168,Private,Capital
-1989,---,Private,Public Health
+1989,1.00E-11,Private,Public Health
 1989,4.654285216,Private,Administration
 1989,2.882905226,Private,Other Health Spending
 1990,14.38209165,Private,Hospital
@@ -140,7 +140,7 @@ year,prop,sector,use
 1990,35.28380908,Private,Other Professionals
 1990,29.8678559,Private,Drugs
 1990,2.461120537,Private,Capital
-1990,---,Private,Public Health
+1990,1.00E-11,Private,Public Health
 1990,4.271516531,Private,Administration
 1990,3.017546816,Private,Other Health Spending
 1991,14.32186547,Private,Hospital
@@ -149,7 +149,7 @@ year,prop,sector,use
 1991,35.00674574,Private,Other Professionals
 1991,30.15657541,Private,Drugs
 1991,2.021096242,Private,Capital
-1991,---,Private,Public Health
+1991,1.00E-11,Private,Public Health
 1991,4.417348535,Private,Administration
 1991,3.079531542,Private,Other Health Spending
 1992,14.01156127,Private,Hospital
@@ -158,7 +158,7 @@ year,prop,sector,use
 1992,34.49207825,Private,Other Professionals
 1992,30.9760134,Private,Drugs
 1992,2.004781278,Private,Capital
-1992,---,Private,Public Health
+1992,1.00E-11,Private,Public Health
 1992,4.44452415,Private,Administration
 1992,3.118586293,Private,Other Health Spending
 1993,13.63761039,Private,Hospital
@@ -167,7 +167,7 @@ year,prop,sector,use
 1993,33.75975619,Private,Other Professionals
 1993,31.33454996,Private,Drugs
 1993,1.873143939,Private,Capital
-1993,---,Private,Public Health
+1993,1.00E-11,Private,Public Health
 1993,5.41442928,Private,Administration
 1993,3.202430569,Private,Other Health Spending
 1994,12.93157635,Private,Hospital
@@ -176,7 +176,7 @@ year,prop,sector,use
 1994,34.30327023,Private,Other Professionals
 1994,31.28852741,Private,Drugs
 1994,1.602214084,Private,Capital
-1994,---,Private,Public Health
+1994,1.00E-11,Private,Public Health
 1994,5.960697191,Private,Administration
 1994,3.248925712,Private,Other Health Spending
 1995,11.1464415,Private,Hospital
@@ -185,7 +185,7 @@ year,prop,sector,use
 1995,35.00432166,Private,Other Professionals
 1995,31.92383235,Private,Drugs
 1995,2.054947506,Private,Capital
-1995,---,Private,Public Health
+1995,1.00E-11,Private,Public Health
 1995,5.961959642,Private,Administration
 1995,3.512577839,Private,Other Health Spending
 1996,10.26033683,Private,Hospital
@@ -194,7 +194,7 @@ year,prop,sector,use
 1996,35.56730316,Private,Other Professionals
 1996,32.49603245,Private,Drugs
 1996,2.163501867,Private,Capital
-1996,---,Private,Public Health
+1996,1.00E-11,Private,Public Health
 1996,5.974551603,Private,Administration
 1996,3.384180658,Private,Other Health Spending
 1997,9.891507342,Private,Hospital
@@ -203,7 +203,7 @@ year,prop,sector,use
 1997,36.36686367,Private,Other Professionals
 1997,33.61207644,Private,Drugs
 1997,1.548177754,Private,Capital
-1997,---,Private,Public Health
+1997,1.00E-11,Private,Public Health
 1997,5.487794976,Private,Administration
 1997,3.517911664,Private,Other Health Spending
 1998,9.38100924,Private,Hospital
@@ -212,7 +212,7 @@ year,prop,sector,use
 1998,36.19049124,Private,Other Professionals
 1998,34.60089184,Private,Drugs
 1998,1.717013973,Private,Capital
-1998,---,Private,Public Health
+1998,1.00E-11,Private,Public Health
 1998,4.459389811,Private,Administration
 1998,4.198046054,Private,Other Health Spending
 1999,9.112909975,Private,Hospital
@@ -221,7 +221,7 @@ year,prop,sector,use
 1999,35.66098863,Private,Other Professionals
 1999,33.28794564,Private,Drugs
 1999,3.245334151,Private,Capital
-1999,---,Private,Public Health
+1999,1.00E-11,Private,Public Health
 1999,4.905148199,Private,Administration
 1999,4.409848942,Private,Other Health Spending
 2000,9.083488679,Private,Hospital
@@ -230,7 +230,7 @@ year,prop,sector,use
 2000,35.27116914,Private,Other Professionals
 2000,33.57617971,Private,Drugs
 2000,2.831429562,Private,Capital
-2000,---,Private,Public Health
+2000,1.00E-11,Private,Public Health
 2000,5.162515904,Private,Administration
 2000,4.443340805,Private,Other Health Spending
 2001,9.081152512,Private,Hospital
@@ -239,7 +239,7 @@ year,prop,sector,use
 2001,35.15276033,Private,Other Professionals
 2001,33.02304976,Private,Drugs
 2001,3.37961959,Private,Capital
-2001,---,Private,Public Health
+2001,1.00E-11,Private,Public Health
 2001,6.177259855,Private,Administration
 2001,4.282671373,Private,Other Health Spending
 2002,9.330342162,Private,Hospital
@@ -248,7 +248,7 @@ year,prop,sector,use
 2002,33.84561178,Private,Other Professionals
 2002,33.08527281,Private,Drugs
 2002,3.506670857,Private,Capital
-2002,---,Private,Public Health
+2002,1.00E-11,Private,Public Health
 2002,6.556186894,Private,Administration
 2002,4.562862432,Private,Other Health Spending
 2003,8.98703855,Private,Hospital
@@ -257,7 +257,7 @@ year,prop,sector,use
 2003,32.53800704,Private,Other Professionals
 2003,34.05976452,Private,Drugs
 2003,3.844668884,Private,Capital
-2003,---,Private,Public Health
+2003,1.00E-11,Private,Public Health
 2003,7.03618159,Private,Administration
 2003,4.662839468,Private,Other Health Spending
 2004,9.183637079,Private,Hospital
@@ -266,7 +266,7 @@ year,prop,sector,use
 2004,32.9011217,Private,Other Professionals
 2004,34.22488213,Private,Drugs
 2004,2.781681738,Private,Capital
-2004,---,Private,Public Health
+2004,1.00E-11,Private,Public Health
 2004,6.95469912,Private,Administration
 2004,4.31628491,Private,Other Health Spending
 2005,9.142111926,Private,Hospital
@@ -275,7 +275,7 @@ year,prop,sector,use
 2005,33.52293889,Private,Other Professionals
 2005,34.06155341,Private,Drugs
 2005,3.529895756,Private,Capital
-2005,---,Private,Public Health
+2005,1.00E-11,Private,Public Health
 2005,6.234244187,Private,Administration
 2005,4.348953325,Private,Other Health Spending
 2006,8.70460792,Private,Hospital
@@ -284,7 +284,7 @@ year,prop,sector,use
 2006,33.11169413,Private,Other Professionals
 2006,33.89680677,Private,Drugs
 2006,4.500292404,Private,Capital
-2006,---,Private,Public Health
+2006,1.00E-11,Private,Public Health
 2006,5.649346932,Private,Administration
 2006,4.428391546,Private,Other Health Spending
 2007,8.705164279,Private,Hospital
@@ -293,7 +293,7 @@ year,prop,sector,use
 2007,33.70178575,Private,Other Professionals
 2007,34.05721502,Private,Drugs
 2007,3.24659336,Private,Capital
-2007,---,Private,Public Health
+2007,1.00E-11,Private,Public Health
 2007,5.935387883,Private,Administration
 2007,4.435189489,Private,Other Health Spending
 2008,8.782377338,Private,Hospital
@@ -302,7 +302,7 @@ year,prop,sector,use
 2008,33.90503646,Private,Other Professionals
 2008,33.87459015,Private,Drugs
 2008,2.777505457,Private,Capital
-2008,---,Private,Public Health
+2008,1.00E-11,Private,Public Health
 2008,6.214280875,Private,Administration
 2008,4.262349054,Private,Other Health Spending
 2009,9.149947158,Private,Hospital
@@ -311,7 +311,7 @@ year,prop,sector,use
 2009,33.27630117,Private,Other Professionals
 2009,34.07072871,Private,Drugs
 2009,2.865624196,Private,Capital
-2009,---,Private,Public Health
+2009,1.00E-11,Private,Public Health
 2009,5.926371775,Private,Administration
 2009,4.120558666,Private,Other Health Spending
 2010,9.012610729,Private,Hospital
@@ -320,7 +320,7 @@ year,prop,sector,use
 2010,30.03628006,Private,Other Professionals
 2010,36.20052035,Private,Drugs
 2010,3.602411802,Private,Capital
-2010,---,Private,Public Health
+2010,1.00E-11,Private,Public Health
 2010,5.861080668,Private,Administration
 2010,4.998099089,Private,Other Health Spending
 2011,8.935819393,Private,Hospital
@@ -329,7 +329,7 @@ year,prop,sector,use
 2011,29.86368907,Private,Other Professionals
 2011,35.99517638,Private,Drugs
 2011,3.471244314,Private,Capital
-2011,---,Private,Public Health
+2011,1.00E-11,Private,Public Health
 2011,6.204499849,Private,Administration
 2011,5.073338556,Private,Other Health Spending
 2012,9.214033776,Private,Hospital
@@ -338,7 +338,7 @@ year,prop,sector,use
 2012,30.64514257,Private,Other Professionals
 2012,35.26653041,Private,Drugs
 2012,3.570115225,Private,Capital
-2012,---,Private,Public Health
+2012,1.00E-11,Private,Public Health
 2012,5.833404143,Private,Administration
 2012,4.814713315,Private,Other Health Spending
 2013,9.612808686,Private,Hospital
@@ -347,7 +347,7 @@ year,prop,sector,use
 2013,30.8497683,Private,Other Professionals
 2013,34.82486767,Private,Drugs
 2013,2.254942261,Private,Capital
-2013,---,Private,Public Health
+2013,1.00E-11,Private,Public Health
 2013,5.971218799,Private,Administration
 2013,5.400254529,Private,Other Health Spending
 2014,9.607402773,Private,Hospital
@@ -356,7 +356,7 @@ year,prop,sector,use
 2014,30.92486121,Private,Other Professionals
 2014,34.22713389,Private,Drugs
 2014,2.714489991,Private,Capital
-2014,---,Private,Public Health
+2014,1.00E-11,Private,Public Health
 2014,5.793157619,Private,Administration
 2014,5.400287663,Private,Other Health Spending
 2015,9.69748558,Private,Hospital
@@ -365,7 +365,7 @@ year,prop,sector,use
 2015,31.13401203,Private,Other Professionals
 2015,34.02765323,Private,Drugs
 2015,2.442130915,Private,Capital
-2015,---,Private,Public Health
+2015,1.00E-11,Private,Public Health
 2015,5.65300089,Private,Administration
 2015,5.520498996,Private,Other Health Spending
 1975,55.23259019,Public,Hospital

@@ -9,8 +9,8 @@
 <body>
 <div id='main-wrapper'>
 	<div id='filters'>
-		<div class='demo current' data-val="Public">Public</div>
-		<div class='demo' data-val="Private">Private</div>
+		<div class='demo' data-val="Public">Public</div>
+		<div class='demo current' data-val="Private">Private</div>
 	</div>
 	<!--space between filter elements and chart-->
 	<div class="clearance"></div>
@@ -19,10 +19,10 @@
 <!--end of top wrapper box-->
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-
+<script src="js/colorbrewer.min.js"></script>
 <script type="text/javascript">
 //~~~~~USER SETTINGS~~~~~
-var USER_DEMO = 'Public';
+var USER_DEMO = 'Private';
 var USER_CAUSE = null;
 
 //~~~~~MARGINS~~~~~
@@ -35,34 +35,36 @@ var margin = {top: 10, right: 15, bottom: 30, left:40},
 //~~~~~SCALES~~~~~
 //define linear horizontal and vertical scales
 //and colour scale for different categories of spending
-var x = d3.time.scale().range([0, width]);
+var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
-var colour = d3.scale.category20c();
+var colour = d3.scale.ordinal().range(colorbrewer.Set3[9]);
 
 //~~~~~AXES~~~~~
-//define x-axis format time as year eg. 1975
+
+var numFormatter = d3.format(".0f")
+//define x-axis
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom")
-    .tickFormat(d3.time.format("%Y"));
+    .tickFormat(function(d) { return numFormatter(d); });
 //define y-axis formate as percentage eg. 100%
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .tickFormat(d3.format('%'));
+    .tickFormat(function(d) { return numFormatter(d) + "%"; });
 
 //~~~~~CATEGORY METADATA~~~~~
 //metadata for each category of spending
-var causes_meta = {
-    "Hospitals": { "name": "Hospitals", "descrip": "Hospitals"  },
-    "Other Institutions": { "name": "Other Institutions", "descrip": "Other Institutions" },
-    "Physicians": { "name": "Physicians", "descrip": "Physicians" },
-    "Other Professionals": { "name": "Other Professionals", "descrip": "Dental, Vision Care, Other" },
-    "Drugs": { "name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies" },
-    "Capital": { "name": "Capital", "descrip": "Capital" },
-    "Public Health": { "name": "Public Health", "descrip": "Public Health" },
-    "Administration": { "name": "Administration", "descrip": "Administration" },
-    "Other Health Spending": { "name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services" },
+var meta = {
+    "Hospitals": {"name": "Hospitals", "descrip": "Hospitals"},
+    "Other Institutions": {"name": "Other Institutions", "descrip": "Other Institutions"},
+    "Physicians": {"name": "Physicians", "descrip": "Physicians"},
+    "Other Professionals": {"name": "Other Professionals", "descrip": "Dental, Vision Care, Other"},
+    "Drugs": {"name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies"},
+    "Capital": {"name": "Capital", "descrip": "Capital"},
+    "Public Health": {"name": "Public Health", "descrip": "Public Health"},
+    "Administration": {"name": "Administration", "descrip": "Administration"},
+    "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services"},
 }
 
 //~~~~~NESTING~~~~~
@@ -141,17 +143,13 @@ function draw(error, data) {
 	x.domain(d3.extent(filtered, function(d) { return d.year; }));
 	y.domain([0, d3.max(filtered, function(d) { return d.y0 + d.y; })]);
 
-	//initiate data join by defining selection to which we will JOIN DATA i.e. layer class element
-	//.data(data) returns UPDATE selection = DOM elements successfully bound to data
+	//join data with current selection (layer class elements)
 	//.enter() returns ENTER selection = placeholder nodes for each element with no DOM element
 	//append new <path> element as last child of each element in ENTER selection
 	//set class to class
 	//set id to the key i.e. category of spending
 	//set path description to path returned by area
-	//transform attribute lists transform definitions that will apply to element and all its children, to:
-	//      output from anonymous function with d (current datum) and i (current index) as arguments
-	//      and returns: "translate(0,0*20)" = translate(x,y)
-	//      this will move each g element down into its appropriate position with the SVG .chart element
+	//set fill to output range value from giving input domain to colour 
 	svg.selectAll(".layer")
 	    .data(layers)
 	  .enter().append("path")
@@ -159,6 +157,24 @@ function draw(error, data) {
 	    .attr("id", function(d) { return d.key; })
 	    .attr("d", function(d) { return area(d.values); })
 	    .style("fill", function(d, i) { return colour(d.key); });
+
+	//add axes
+	svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+	svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    //another data join to add labels for each layer
+    var layer_label = svg.selectAll(".layerlabel")
+	    .data(layers)
+	  .enter().append("text")
+	    .attr("class", "layerlabel")
+	    .attr("transform", "translate(" + x(2010) + ",0)");
+
+
 }
 </script>
 </body>
