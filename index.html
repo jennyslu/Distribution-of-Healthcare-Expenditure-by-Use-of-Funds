@@ -23,7 +23,6 @@
 <script type="text/javascript">
 //~~~~~USER SETTINGS~~~~~
 var USER_FILTER = 'Private';
-var USER_SELECT = null;
 
 //~~~~~MARGINS~~~~~
 //define margin object according to d3.js conventions
@@ -181,6 +180,54 @@ function draw(error, data) {
     			return ""; }
     		else {
     			return d.key; }});
+
+    //layer interaction
+    var USER_SELECT = null;
+    //adds or removes an event listener (unnamed function) to each element in current selection
+    svg.selectAll(".layer").on("click", function(d,i) {
+    	//if user has not clicked and clicks then set USER_SELECT to "id" of clicked on DOM element
+	    if (USER_SELECT === null) {
+	        USER_SELECT = d3.select(this).attr("id");   
+        } else {
+	        USER_SELECT = null;
+	    }
+	    update()
+	});
+
+	function update() {
+        console.log(USER_SELECT);
+        filtered = data.filter(function(d) { return d.sector === USER_FILTER; }); 
+
+        if (USER_SELECT != null) {
+        	//make all non-selected layers' prop = 0 so they don't show
+        	filtered = filtered.map(function(d) {
+        		if (d.use === USER_SELECT) {
+	        		//return selected layer object as is
+	        		return d; 
+	        	} else {
+	        		return {
+	        			"year": d.year,
+	                    "use": d.use,
+	                    "sector": d.sector,
+	                    "prop": 0,
+	                    "y": d.y,
+	                    "y0": d.y0};
+        		}
+        	});
+        }
+        //update layers
+		//call stack on filtered and nested data
+		var layers = stack(nest.entries(filtered));
+
+		//d3 transition on UPDATE selection
+		d3.selectAll(".layer")
+		    .data(layers)
+		  .transition()
+		    .duration(1000)
+		    .attr("d", function(d) {
+		        return area(d.values);
+		    });
+	}
 }
 </script>
 </body>
