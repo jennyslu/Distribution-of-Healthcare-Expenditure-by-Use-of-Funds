@@ -64,7 +64,7 @@ var USER_SELECT = null;
 //calculate width and height
 var margin = {top: 10, right: 15, bottom: 30, left:40},
 	width = 1090 - margin.left - margin.right,
-	height = 700 - margin.top - margin.bottom;
+	height = 600 - margin.top - margin.bottom;
 
 //~~~~~SCALES~~~~~
 //define linear horizontal and vertical scales
@@ -229,8 +229,7 @@ function draw(error, data) {
         	update();
         } else {
         	update_two();
-        }
-        
+        }   
     });
 
     //~~~~~ADD LAYER INTERACTIVITY~~~~~
@@ -247,7 +246,6 @@ function draw(error, data) {
 	//~~~~~UPDATE CHART~~~~~
 	function update() {
 		console.log(USER_FILTER);
-        console.log(USER_SELECT);
         filtered = data.filter(function(d) { return d.sector === USER_FILTER; }); 
 
         if (USER_SELECT != null) {
@@ -298,7 +296,81 @@ function draw(error, data) {
 	    			return 0;
 	    		} else { return 1;}
 	    	});
-		}
+	}
+
+	//~~~~~UPDATE CHART~~~~~
+	function update_two() {
+		console.log(USER_FILTER);
+		
+		filtered = data.filter(function(d) { return d.sector === "Public"; }); 
+
+		//~~~~~CLEAR CHART~~~~~
+    	//make all layers prop 0 so as to 'clear' the graph
+    	filtered = filtered.map(function(d) { return {
+												"year": d.year,
+									            "use": d.use,
+									            "sector": d.sector,
+									            "prop": 0,
+									            "y": d.y,
+									            "y0": d.y0}; });
+		//call stack on filtered and nested data
+		var layers = stack(nest.entries(filtered));
+		//d3 transition on UPDATE selection of layers
+		d3.selectAll(".layer")
+		    .data(layers)
+		  .transition()
+		    .duration(1000)
+		    .attr("d", function(d) {
+		        return area(d.values);
+		    });
+	    //remove labels
+	    d3.selectAll(".layerlabel")
+	    	.data(layers)
+	       .transition()
+	        .duration(1000)
+	    	.style("opacity", 0);
+
+		//~~~~~DRAW NEW CHART~~~~~
+		//use second data set that calculated the percentages of each funding source for each usage
+		filtered = data.filter(function(d) { return d.sector ===  "Private1" ||
+													d.sector === "Public1"; });
+		//filter to the selected use
+		filtered = filtered.filter(function(d) { return d.use === USER_FILTER; });
+
+        var nestbysector = d3.nest().key(function (d) { return d.sector; });
+
+        //call stack on filtered and nested data
+		var layers = stack(nestbysector.entries(filtered));
+
+		//d3 transition on UPDATE selection of layers
+		d3.selectAll(".layer")
+		    .data(layers)
+		  .transition()
+		    .duration(1000)
+		    .attr("d", function(d) {
+		        return area(d.values);
+		    });
+
+	    d3.selectAll(".layerlabel")
+	    	.data(layers)
+	       .transition()
+	        .duration(1000)
+		    .attr("transform", function (d) {
+		    	return "translate(" + x(2010) + "," + y(d.values[35].y0 + d.values[35].y/2) + ")"; })
+	    	.attr("dy", "0.5em")
+	    	.text(function (d) { 
+	    		if (USER_FILTER === "Public Health" && d.key === "Private1") {
+	    			return ""; }
+	    		else { if (d.key === "Private1") { return "Private";
+	    				} else { return "Public"; }
+	    		}})
+	    	.style("opacity", function(){
+	    		if (USER_SELECT != null) {
+	    			return 0;
+	    		} else { return 1;}
+	    	});
+	}
+
 }
 </script>
 </body>
