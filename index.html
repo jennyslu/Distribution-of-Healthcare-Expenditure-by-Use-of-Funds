@@ -7,10 +7,44 @@
 </head>
 
 <body>
+<h2>Healthcare Expenditure by Use of Funds</h2>
+<div class="clearance"></div>
 <div id='main-wrapper'>
 	<div id='filters'>
-		<div class='demo' data-val="Public">Public</div>
-		<div class='demo current' data-val="Private">Private</div>
+		<div class='demo' data-val="Public">
+			<span>Public</span>
+		</div>
+		<div class='demo current' data-val="Private">
+			<span>Private</span>
+		</div>
+		<div class='sep'>&nbsp;</div>
+		<div class='demo' data-val="Hospital">
+			<span>Hospital</span>
+		</div>
+		<div class='demo' data-val="Other Institutions">
+			<span>Other Institutions</span>
+		</div>
+		<div class='demo' data-val="Physicians">
+			<span>Physicians</span>
+		</div>
+		<div class='demo' data-val="Other Professionals">
+			<span>Other Professionals</span>
+		</div>
+		<div class='demo' data-val="Drugs">
+			<span>Drugs</span>
+		</div>
+		<div class='demo' data-val="Public Health">
+			<span>Public Health</span>
+		</div>
+		<div class='demo' data-val="Administration">
+			<span>Admin</span>
+		</div>
+		<div class='demo' data-val="Capital">
+			<span>Capital</span>
+		</div>
+		<div class='demo' data-val="Other Health Spending">
+			<span>Other</span>
+		</div>
 	</div>
 	<!--space between filter elements and chart-->
 	<div class="clearance"></div>
@@ -191,7 +225,12 @@ function draw(error, data) {
         d3.select(".demo.current").attr("class", "demo");
         USER_FILTER = d3.select(this).attr("data-val");
         d3.select(this).attr("class", "demo current");
-        update();
+        if (USER_FILTER === "Public" || USER_FILTER === "Private") {
+        	update();
+        } else {
+        	//update differently
+        }
+        
     });
 
     //~~~~~ADD LAYER INTERACTIVITY~~~~~
