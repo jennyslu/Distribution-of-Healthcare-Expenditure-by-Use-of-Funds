@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<h2>Healthcare Expenditure by Use of Funds</h2>
+<h2>Healthcare Expenditure by Use and Source of Funds</h2>
 <div class="clearance"></div>
 <div id='main-wrapper'>
 	<div id='filters'>
@@ -72,6 +72,7 @@ var margin = {top: 10, right: 15, bottom: 30, left:40},
 var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 var colour = d3.scale.ordinal().range(colorbrewer.Set3[9]);
+var colourtwo = d3.scale.ordinal().domain(["Private1", "Public1"]).range(colorbrewer.Set2[8]);
 
 //~~~~~AXES~~~~~
 var numFormatter = d3.format(".0f")
@@ -88,6 +89,7 @@ var yAxis = d3.svg.axis()
 
 //~~~~~CATEGORY METADATA~~~~~
 //metadata for each category of spending
+/*
 var meta = {
     "Hospitals": {"name": "Hospitals", "descrip": "Hospitals"},
     "Other Institutions": {"name": "Other Institutions", "descrip": "Other Institutions"},
@@ -98,7 +100,8 @@ var meta = {
     "Public Health": {"name": "Public Health", "descrip": "Public Health"},
     "Administration": {"name": "Administration", "descrip": "Administration"},
     "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services"},
-}
+    }
+*/
 
 //~~~~~NESTING~~~~~
 //in order to stack data it must be nested into arrays that each represent one category
@@ -243,6 +246,9 @@ function draw(error, data) {
 	    update()
 	});
 
+	//~~~~~STUFF FOR WHEN ONE LAYER IS SELECTED~~~~~
+
+
 	//~~~~~UPDATE CHART~~~~~
 	function update() {
 		console.log(USER_FILTER);
@@ -276,7 +282,8 @@ function draw(error, data) {
 		    .duration(1000)
 		    .attr("d", function(d) {
 		        return area(d.values);
-		    });
+		    })
+		    .style("fill", function(d) { return colour(d.key); });
 
 	    //d3 transition on UPDATE selection of layer labels
 	    d3.selectAll(".layerlabel")
@@ -298,10 +305,8 @@ function draw(error, data) {
 	    	});
 	}
 
-	//~~~~~UPDATE CHART~~~~~
+	//~~~~~UPDATE CHART SECOND~~~~~
 	function update_two() {
-		console.log(USER_FILTER);
-		
 		filtered = data.filter(function(d) { return d.sector === "Public"; }); 
 
 		//~~~~~CLEAR CHART~~~~~
@@ -349,7 +354,8 @@ function draw(error, data) {
 		    .duration(1000)
 		    .attr("d", function(d) {
 		        return area(d.values);
-		    });
+		    })
+		    .style("fill", function(d) { return colourtwo(d.key); });
 
 	    d3.selectAll(".layerlabel")
 	    	.data(layers)
