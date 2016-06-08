@@ -118,6 +118,7 @@ path.layer:hover {
 .layerlabel {
 	fill: #404040;
 	text-anchor: middle;
+	font-size: 13px;
 	
 	/* No select */
 	pointer-events: none;
