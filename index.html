@@ -3,11 +3,18 @@
 <head>
 	<title>Distribution of Healthcare Expenditure by Use of Funds</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 	<meta charset="utf-8">
 </head>
 
 <body>
-<h2>Healthcare Expenditure by Use and Source of Funds</h2>
+<h2>Canadian Healthcare Expenditure by Use and Source of Funds</h2>
+<div class="clearance"></div>	
+<h3>
+	<p>In Canada we have single-payer healthcare, where basic services are provided by private doctors, with the entire fee paid for by the government - mostly the provincial government. Although most services are free at point-of-use, there are several services that are not covered for which are typically paid for by private insurance companies, or out-of-pocket. </p>
+	<p>This visualization shows how public funds are used, as well as how private funds are being spent. You can further examine the trends of individual categories of health expenditure by clicking on the layer you are interested in. All values are adjusted for inflation and proportions were calculated using current dollars.</p>
+	<p>However, it's not clear from looking at private and public fund distribution separately how the widely scale of spending varies for both. For example, in 2015, over $155B in public funds were spent on healthcare while, the private sector spent approximately $64B - less than half . To get a better sense of this, you can see what portion of a sector is funded publicly vs. privately by clicking on the category filters.</p>
+</h3>
 <div class="clearance"></div>
 <div id='main-wrapper'>
 	<div id='filters'>
@@ -51,6 +58,9 @@
 	<div id="chart"></div>
 </div>
 <!--end of top wrapper box-->
+<h3>
+	<p>I noticed there has been a steady increase of spending on drugs for both the public and private sector. However, the proportion of public spending for drugs has  public funding for drugs as well as the steady increase of private funding for administration.</p>
+</h3>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="js/colorbrewer.min.js"></script>
@@ -63,8 +73,8 @@ var USER_SELECT = null;
 //define margin object according to d3.js conventions
 //calculate width and height
 var margin = {top: 10, right: 15, bottom: 30, left:40},
-	width = 1090 - margin.left - margin.right,
-	height = 600 - margin.top - margin.bottom;
+	width = 1100 - margin.left - margin.right,
+	height = 575 - margin.top - margin.bottom;
 
 //~~~~~SCALES~~~~~
 //define linear horizontal and vertical scales
@@ -205,7 +215,10 @@ function draw(error, data) {
         .call(xAxis);
 	svg.append("g")
         .attr("class", "y axis")
-        .call(yAxis);
+        .call(yAxis)
+        .attr("transform", "translate(3,0)");
+
+
 
 	//~~~~~DATA JOIN LAYER LABEL ELEMENTS~~~~~
     //don't show "Public Health" label if user selects "Private" sector since spending is 0
@@ -302,7 +315,8 @@ function draw(error, data) {
 	    		if (USER_SELECT != null) {
 	    			return 0;
 	    		} else { return 1;}
-	    	});
+	    	})
+	    	.style("fill", "#404040");
 	}
 
 	//~~~~~UPDATE CHART SECOND~~~~~
@@ -374,7 +388,8 @@ function draw(error, data) {
 	    		if (USER_SELECT != null) {
 	    			return 0;
 	    		} else { return 1;}
-	    	});
+	    	})
+	    	.style("fill", "#FFFFFF");
 	}
 
 }

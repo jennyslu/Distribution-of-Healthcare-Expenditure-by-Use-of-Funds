@@ -25,14 +25,29 @@
 		
 		
 body {
-    font-family: "Helvetica", Arial, sans-serif;
-	font-size: 12px;
+    font-family: 'Lora', serif;
+	font-size: 14px;
 }
 
 h2 {
-	ont-family: "Helvetica", Arial, sans-serif;
+	font-family: 'Lora', serif;
 	font-size: 36px;
 	text-align: center;
+}
+
+h3 {
+	font-family: 'Lora', serif;
+	font-size: 14px;
+	width: 1000px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: 2em;
+	line-height: 150%;
+}
+
+.clearance {
+	height: 10px;
 }
 
 .clr { clear:both; }
@@ -116,7 +131,6 @@ path.layer:hover {
 }
 
 .layerlabel {
-	fill: #404040;
 	text-anchor: middle;
 	font-size: 13px;
 	
