@@ -100,15 +100,15 @@ var yAxis = d3.svg.axis()
 //~~~~~CATEGORY METADATA~~~~~
 //metadata for each category of spending
 var meta = {
-    "Hospital": {"name": "Hospitals", "descrip": "Hospitals"},
-    "Other Institutions": {"name": "Other Institutions", "descrip": "Other Institutions"},
-    "Physicians": {"name": "Physicians", "descrip": "Physicians"},
-    "Other Professionals": {"name": "Other Professionals", "descrip": "Dental, Vision Care, Other"},
-    "Public Health": {"name": "Public Health", "descrip": "Public Health"},
-    "Drugs": {"name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies"},
-    "Administration": {"name": "Administration", "descrip": "Administration"},
-    "Capital": {"name": "Capital", "descrip": "Capital"},
-    "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services"}
+    "Hospital": {"name": "Hospitals", "descrip": "Hospitals", "xpos": 2000},
+    "Other Institutions": {"name": "Other Institutions", "descrip": "Other Institutions", "xpos": 1985},
+    "Physicians": {"name": "Physicians", "descrip": "Physicians", "xpos": 2002},
+    "Other Professionals": {"name": "Other Professionals", "descrip": "Dental, Vision Care, Other", "xpos": 1987},
+    "Public Health": {"name": "Public Health", "descrip": "Public Health", "xpos": 2000},
+    "Drugs": {"name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies", "xpos": 2010},
+    "Administration": {"name": "Administration", "descrip": "Administration", "xpos": 2007},
+    "Capital": {"name": "Capital", "descrip": "Capital", "xpos": 1984},
+    "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services", "xpos": 2010}
     }
 
 //~~~~~NESTING~~~~~
@@ -250,7 +250,9 @@ function draw(error, data) {
 	  .enter().append("text")
 	    .attr("class", "layerlabel")
 	    .attr("transform", function (d) {
-	    	return "translate(" + x(2010) + "," + y(d.values[35].y0 + d.values[35].y/2) + ")"; })
+	    	var xpos = meta[d.key].xpos;
+	    	var yobj = d.values[(xpos - 1975)];
+	    	return "translate(" + x(xpos) + "," + y(yobj.y0 + yobj.y/2) + ")"; })
     	.attr("dy", "0.5em")
     	.text(function (d) { 
     		if (USER_FILTER === "Private" && d.key === "Public Health") {
@@ -258,7 +260,7 @@ function draw(error, data) {
     		else {
     			return d.key; }});
 
-	// Next layer.
+	//~~~~~NEXT LAYER~~~~~
 	function next() {
 	    if (USER_SELECT != null) {
 	        var curr_index = Object.keys(meta).indexOf(USER_SELECT);
@@ -271,7 +273,7 @@ function draw(error, data) {
 	    }
 	}
 
-	// Previous layer.
+	//~~~~~PREVIOUS LAYER~~~~~
 	function previous() {
 	    if (USER_SELECT != null) {
 	        var curr_index = Object.keys(meta).indexOf(USER_SELECT);
@@ -284,7 +286,7 @@ function draw(error, data) {
 	    }
 	}
 
-	// Reset and show all layers.
+	//~~~~~SHOW ALL LAYERS~~~~~
 	function reset() {
 	    USER_SELECT = null;
 	    update();
@@ -319,7 +321,6 @@ function draw(error, data) {
 
 	//~~~~~UPDATE CHART~~~~~
 	function update() {
-		console.log(USER_FILTER);
         filtered = data.filter(function(d) { return d.sector === USER_FILTER; }); 
 
         if (USER_SELECT != null) {
@@ -359,7 +360,9 @@ function draw(error, data) {
 	       .transition()
 	        .duration(1000)
 		    .attr("transform", function (d) {
-		    	return "translate(" + x(2010) + "," + y(d.values[35].y0 + d.values[35].y/2) + ")"; })
+		    	var xpos = meta[d.key].xpos;
+	    		var yobj = d.values[(xpos - 1975)];
+	    		return "translate(" + x(xpos) + "," + y(yobj.y0 + yobj.y/2) + ")"; })
 	    	.attr("dy", "0.5em")
 	    	.text(function (d) { 
 	    		if (USER_FILTER === "Private" && d.key === "Public Health") {
