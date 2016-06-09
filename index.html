@@ -86,8 +86,8 @@ var margin = {top: 10, right: 15, bottom: 30, left:40},
 //and colour scale for different categories of spending
 var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
-var colour = d3.scale.ordinal().range(colorbrewer.Set3[9]);
-var colourtwo = d3.scale.ordinal().domain(["Private1", "Public1"]).range(colorbrewer.Set2[8]);
+var colour = d3.scale.ordinal().range(colorbrewer.BrBG[10]);
+var colourtwo = d3.scale.ordinal().domain(["Private1", "Public1"]).range(colorbrewer.RdGy[11]);
 
 //~~~~~AXES~~~~~
 var numFormatter = d3.format(".0f")
@@ -105,15 +105,15 @@ var yAxis = d3.svg.axis()
 //~~~~~CATEGORY METADATA~~~~~
 //metadata for each category of spending
 var meta = {
-    "Hospital": {"name": "Hospitals", "descrip": "Hospitals", "xpos": 2000},
-    "Other Institutions": {"name": "Other Institutions", "descrip": "Other Institutions", "xpos": 1985},
+    "Hospital": {"name": "Hospital", "descrip": "Hospital", "xpos": 2000},
+    "Other Institutions": {"name": "Other_Institutions", "descrip": "Other Institutions", "xpos": 1985},
     "Physicians": {"name": "Physicians", "descrip": "Physicians", "xpos": 2002},
-    "Other Professionals": {"name": "Other Professionals", "descrip": "Dental, Vision Care, Other", "xpos": 1987},
-    "Public Health": {"name": "Public Health", "descrip": "Public Health", "xpos": 2000},
+    "Other Professionals": {"name": "Other_Professionals", "descrip": "Dental, Vision Care, Other", "xpos": 1987},
+    "Public Health": {"name": "Public_Health", "descrip": "Public Health", "xpos": 2000, "colour": ""},
     "Drugs": {"name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies", "xpos": 2010},
     "Administration": {"name": "Administration", "descrip": "Administration", "xpos": 2007},
     "Capital": {"name": "Capital", "descrip": "Capital", "xpos": 1984},
-    "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services", "xpos": 2010}
+    "Other Health Spending": {"name": "Other_Health_Spending", "descrip": "Research, Other Goods, Other Services", "xpos": 2010}
     }
 
 //~~~~~NESTING~~~~~
@@ -232,7 +232,7 @@ function draw(error, data) {
 	    .data(layers)
 	  .enter().append("path")
 	    .attr("class", "layer")
-	    .attr("id", function(d) { return d.key; })
+	    .attr("id", function(d) { return meta[d.key].name; })
 	    .attr("d", function(d) { return area(d.values); })
 	    .style("fill", function(d) { return colour(d.key); });
 
@@ -245,8 +245,6 @@ function draw(error, data) {
         .attr("class", "y axis")
         .call(yAxis)
         .attr("transform", "translate(3,0)");
-
-
 
 	//~~~~~DATA JOIN LAYER LABEL ELEMENTS~~~~~
     //don't show "Public Health" label if user selects "Private" sector since spending is 0
@@ -263,7 +261,8 @@ function draw(error, data) {
     		if (USER_FILTER === "Private" && d.key === "Public Health") {
     			return ""; }
     		else {
-    			return d.key; }});
+    			return d.key; }})
+    	.style("fill", "#FFFFFF");
 
 	//~~~~~NEXT LAYER~~~~~
 	function next() {
@@ -314,15 +313,13 @@ function draw(error, data) {
     svg.selectAll(".layer").on("click", function(d,i) {
     	//if user has not clicked and clicks then set USER_SELECT to "id" of clicked on DOM element
 	    if (USER_SELECT === null) {
-	        USER_SELECT = d3.select(this).attr("id");   
+	        USER_SELECT = d3.select(this).attr("id");
+	        USER_SELECT = USER_SELECT.replace("_", " ");   
         } else {
 	        USER_SELECT = null;
 	    }
 	    update()
 	});
-
-	//~~~~~STUFF FOR WHEN ONE LAYER IS SELECTED~~~~~
-
 
 	//~~~~~UPDATE CHART~~~~~
 	function update() {
@@ -379,15 +376,18 @@ function draw(error, data) {
 	    			return 0;
 	    		} else { return 1;}
 	    	})
-	    	.style("fill", "#404040");
+	    	.style("fill", "#FFFFFF");
 
     	d3.select("#curruse")
 			.transition()
 			.duration(1000)
 			.text(function(d) { 
 				if (USER_SELECT != null) {
-					return meta[USER_SELECT].descrip; } } );
-
+					if (USER_SELECT === meta[USER_SELECT].descrip) {
+						return USER_SELECT;
+					} else {
+						return USER_SELECT + ": " + meta[USER_SELECT].descrip;
+					} } } );
 		}
 
 	//~~~~~UPDATE CHART SECOND~~~~~
@@ -442,6 +442,9 @@ function draw(error, data) {
 		    })
 		    .style("fill", function(d) { return colourtwo(d.key); });
 
+	    d3.select("#Other_Professionals").style("fill", "#D3D3D3");
+	    d3.select("#Drugs").style("fill", "#94A3B9");
+
 	    d3.selectAll(".layerlabel")
 	    	.data(layers)
 	       .transition()
@@ -460,6 +463,7 @@ function draw(error, data) {
 	}
 
 }
+
 </script>
 </body>
 </html>

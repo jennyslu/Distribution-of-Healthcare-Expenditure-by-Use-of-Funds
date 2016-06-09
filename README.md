@@ -67,10 +67,35 @@ At first I thought this might be because the path itself was jagged from lack of
 Michael Persinger:
 I don't like the colours.
 Border that appears when hovering over layer is clipped by other path and appears to be jagged.
+What do you notice in the visualization?
+- The top part of the path stroke that shows on hover is clipped by the path above it.
+Do you have any questions about the data?
+- It would be nice if each category was defined, as is I don't necessarily know what is covered.
+What relationships do you notice?
+ - Facilities seem to cost less but medicine costs more.  
+What do you think is the main takeaway from this visualization?
+ - Private and public sectors spend their money very differently, probably to cater to different niches.
+Is there something you don’t understand?
+ - Why do you see different names for some of the categories when you view them by themselves (by clicking on them). For example, "Other Professionals" becomes "Dental, Vision Care, Other".
 
 Reponse:
-I don't think there is a fix for this now. It looks like there may be in the future: 
+I don't think there is a fix for the SVG border for now. It looks like there may be in the future: 
 https://svgwg.org/specs/strokes/#SpecifyingStrokeAlignment 
+
+I added better descriptions for layer labelling
+
+I changed the colours
+
+//
+
+Conrad Crofts:
+Might be good to show a grid to better see detail in data
+Why leave in public health if it's 100% publically funded?
+
+Response:
+I think the grid would make it too cluttered so I won't add in any lines. 
+I did think about omitting public health but I didn't for consistency. 
+
 
 ~~~~~RESOURCES~~~~~
 http://flowingdata.com/2016/01/05/causes-of-death/
