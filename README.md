@@ -96,6 +96,14 @@ Response:
 I think the grid would make it too cluttered so I won't add in any lines. 
 I did think about omitting public health but I didn't for consistency. 
 
+//
+
+Lisa Li:
+Maybe you can reference which tab to look at when you talk about some of the concepts
+
+Reponse:
+I think this is a good idea. I added some comments.
+
 
 ~~~~~RESOURCES~~~~~
 http://flowingdata.com/2016/01/05/causes-of-death/
