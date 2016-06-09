@@ -281,8 +281,8 @@ function draw(error, data) {
 	function previous() {
 	    if (USER_SELECT != null) {
 	        var curr_index = Object.keys(meta).indexOf(USER_SELECT);
-	        if (curr_index == 1) {
-	            USER_SELECT = Object.keys(meta)[Object.keys(meta).length];
+	        if (curr_index == 0) {
+	            USER_SELECT = Object.keys(meta)[Object.keys(meta).length-1];
 	        } else {
 	            USER_SELECT = Object.keys(meta)[curr_index-1];
 	        }
