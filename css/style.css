@@ -114,8 +114,8 @@ span{
 .y.axis .domain { display: none; }
 
 path.layer:hover {
-	stroke: #333;
-	shape-rendering: crispEdges;
+	stroke: #404040;
+	stroke-width: 1px;
 }
 
 #curruse {
