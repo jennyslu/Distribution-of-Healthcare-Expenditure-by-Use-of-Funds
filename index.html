@@ -18,10 +18,10 @@
 <div class="clearance"></div>
 <div id='main-wrapper'>
 	<div id='filters'>
-		<div class='demo' data-val="Public">
+		<div class='demo current' data-val="Public">
 			<span>Public</span>
 		</div>
-		<div class='demo current' data-val="Private">
+		<div class='demo' data-val="Private">
 			<span>Private</span>
 		</div>
 		<div class='sep'>&nbsp;</div>
@@ -66,7 +66,7 @@
 <script src="js/colorbrewer.min.js"></script>
 <script type="text/javascript">
 //~~~~~USER SETTINGS~~~~~
-var USER_FILTER = "Private";
+var USER_FILTER = "Public";
 var USER_SELECT = null;
 
 //~~~~~MARGINS~~~~~
@@ -99,19 +99,17 @@ var yAxis = d3.svg.axis()
 
 //~~~~~CATEGORY METADATA~~~~~
 //metadata for each category of spending
-/*
 var meta = {
-    "Hospitals": {"name": "Hospitals", "descrip": "Hospitals"},
+    "Hospital": {"name": "Hospitals", "descrip": "Hospitals"},
     "Other Institutions": {"name": "Other Institutions", "descrip": "Other Institutions"},
     "Physicians": {"name": "Physicians", "descrip": "Physicians"},
     "Other Professionals": {"name": "Other Professionals", "descrip": "Dental, Vision Care, Other"},
-    "Drugs": {"name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies"},
-    "Capital": {"name": "Capital", "descrip": "Capital"},
     "Public Health": {"name": "Public Health", "descrip": "Public Health"},
+    "Drugs": {"name": "Drugs", "descrip": "Prescriptions, Over the Counter, Personal Supplies"},
     "Administration": {"name": "Administration", "descrip": "Administration"},
-    "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services"},
+    "Capital": {"name": "Capital", "descrip": "Capital"},
+    "Other Health Spending": {"name": "Other Health Spending", "descrip": "Research, Other Goods, Other Services"}
     }
-*/
 
 //~~~~~NESTING~~~~~
 //in order to stack data it must be nested into arrays that each represent one category
@@ -190,7 +188,32 @@ function draw(error, data) {
 	//set domains for x and y scales
 	x.domain(d3.extent(filtered, function(d) { return d.year; }));
 	y.domain([0, d3.max(filtered, function(d) { return d.y0 + d.y; })]);
-	
+
+	//
+	// Navigation buttons for previous and next
+	//
+	var reset_button = svg.append("text")
+	    .attr("id", "reset")
+	    .attr("class", "navbutton")
+	    .attr("transform", "translate("+ (width/2) + "," + (height/2+margin.top-150) + ")")
+	    .text("SHOW ALL")
+	    .on("click", reset);
+	var prev_button = svg.append("text")
+	    .attr("id", "previous")
+	    .attr("class", "navbutton")
+	    .attr("transform", "translate("+ (width/2-30) + "," + (height/2+margin.top-50) + ")")
+	    .text("< PREV")
+	    .on("click", previous);
+	var next_button = svg.append("text")
+	    .attr("id", "next")
+	    .attr("class", "navbutton")
+	    .attr("transform", "translate("+ (width/2+30) + "," + (height/2+margin.top-50) + ")")
+	    .text("NEXT >")
+	    .on("click", next);
+	var curr_text = svg.append("text")
+    	.attr("id", "curruse")
+	    .attr("transform", "translate("+ (width/2) + "," + (height/2+margin.top-100) + ")");
+
 	//~~~~~DATA JOIN STACKED AREA ELEMENTS~~~~~
 	//join data with layer class elements
 	//.data(layers) returns UPDATE selection = array of length 9 contains nothing
@@ -234,6 +257,38 @@ function draw(error, data) {
     			return ""; }
     		else {
     			return d.key; }});
+
+	// Next layer.
+	function next() {
+	    if (USER_SELECT != null) {
+	        var curr_index = Object.keys(meta).indexOf(USER_SELECT);
+	        if (curr_index == Object.keys(meta).length-1) {
+	            USER_SELECT = Object.keys(meta)[0];
+	        } else {
+	            USER_SELECT = Object.keys(meta)[curr_index+1];
+	        }
+	        update();
+	    }
+	}
+
+	// Previous layer.
+	function previous() {
+	    if (USER_SELECT != null) {
+	        var curr_index = Object.keys(meta).indexOf(USER_SELECT);
+	        if (curr_index == 1) {
+	            USER_SELECT = Object.keys(meta)[Object.keys(meta).length];
+	        } else {
+	            USER_SELECT = Object.keys(meta)[curr_index-1];
+	        }
+	        update();
+	    }
+	}
+
+	// Reset and show all layers.
+	function reset() {
+	    USER_SELECT = null;
+	    update();
+	}
 
 	//~~~~~ADD FILTER BUTTON INTERACTIVITY~~~~~
     //adds or removes an event listener (unnamed function) to each element in current selection	
@@ -317,7 +372,15 @@ function draw(error, data) {
 	    		} else { return 1;}
 	    	})
 	    	.style("fill", "#404040");
-	}
+
+    	d3.select("#curruse")
+			.transition()
+			.duration(1000)
+			.text(function(d) { 
+				if (USER_SELECT != null) {
+					return meta[USER_SELECT].descrip; } } );
+
+		}
 
 	//~~~~~UPDATE CHART SECOND~~~~~
 	function update_two() {
@@ -384,11 +447,7 @@ function draw(error, data) {
 	    		else { if (d.key === "Private1") { return "Private";
 	    				} else { return "Public"; }
 	    		}})
-	    	.style("opacity", function(){
-	    		if (USER_SELECT != null) {
-	    			return 0;
-	    		} else { return 1;}
-	    	})
+	    	.style("opacity", function(){ return 1; })
 	    	.style("fill", "#FFFFFF");
 	}
 
