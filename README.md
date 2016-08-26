@@ -1,13 +1,20 @@
 ~~~~~SUMMARY~~~~~
-In Canada we have single-payer healthcare. Under this model, basic services are provided by private doctors and the entire fee is paid for by the government (mostly the provincial government). Although most services are free at point-of-use, there are several services that are not covered. These services are typically paid for by private insurance companies, or out of the patient's own pocket.
-This visualization shows how the public sector (i.e. provincial taxes) and the private sector (i.e. private insurance companies) spends money. 
+In Canada we have single-payer healthcare. Under this model, basic services are provided by private doctors 
+and the entire fee is paid for by the government (mostly the provincial government). Although most services 
+are free at point-of-use, there are several services that are not covered. These services are typically paid 
+for by private insurance companies, or out of the patient's own pocket.
+This visualization shows how the public sector (i.e. provincial taxes) and the private sector (i.e. private 
+insurance companies) spends money. 
 
 ~~~~~DESIGN~~~~~
-I chose a stacked area chart because it's a good way of visualizing distributions and I wanted to see changes over time. I used colour as a visual encoding for different categories of spending. I also added labels.
+I chose a stacked area chart because it's a good way of visualizing distributions and I wanted to see changes
+over time. I used colour as a visual encoding for different categories of spending. I also added labels.
 
-However, I think it can be hard to determine an individual category's changes over time when it is stacked so I also wanted to add the ability to just see the area graph for one category of healthcare spending. 
+However, I think it can be hard to determine an individual category's changes over time when it is stacked 
+so I also wanted to add the ability to just see the area graph for one category of healthcare spending. 
 
-I also added the ability to just look at one category and see how much of it is funded publicy and how much is funded privately. 
+I also added the ability to just look at one category and see how much of it is funded publicy and how much 
+is funded privately. 
 
 ~~~~~FEEDBACK~~~~~
 
@@ -22,10 +29,12 @@ I added the label as well as buttons to show previous, next, and show all button
 Casey Iannone:
 What do you notice in the visualization?
 - Nice viz & lots of data to comb through. 
-- looks like public dollars are spend more on physicians & hospitals and private is spent on specialist & drugs
+- looks like public dollars are spend more on physicians & hospitals and private is spent on specialist 
+    & drugs
 - also looks like drugs are making up bigger chunks for public and private
 Do you have any questions about the data?
-- Everything is straight forward and simple. I would find a better position for the labels, as when something is very small overlaps into others areas.
+- Everything is straight forward and simple. I would find a better position for the labels, as when 
+    something is very small overlaps into others areas.
 What relationships do you notice?
 - Looks like were medicating more 
 - also looks like drugs are making up bigger chunks for public and private
@@ -36,7 +45,8 @@ Is there something you don’t understand?
 - nope.﻿
 
 Response:
-I think Casey's statement that we might be medicating more is an interesting one and one that I think is probably true. 
+I think Casey's statement that we might be medicating more is an interesting one and one that I 
+think is probably true. 
 
 //
 
@@ -60,7 +70,8 @@ John Enyeart:
 I like it. The borders/outlines of different graph sections look a little bit choppy, though.﻿
 
 Response:
-At first I thought this might be because the path itself was jagged from lack of data points. But I tried removing crisp edges style and it seemed to help
+At first I thought this might be because the path itself was jagged from lack of data points. But I 
+tried removing crisp edges style and it seemed to help
 
 //
 
@@ -76,7 +87,8 @@ What relationships do you notice?
 What do you think is the main takeaway from this visualization?
  - Private and public sectors spend their money very differently, probably to cater to different niches.
 Is there something you don’t understand?
- - Why do you see different names for some of the categories when you view them by themselves (by clicking on them). For example, "Other Professionals" becomes "Dental, Vision Care, Other".
+ - Why do you see different names for some of the categories when you view them by themselves (by 
+    clicking on them). For example, "Other Professionals" becomes "Dental, Vision Care, Other".
 
 Reponse:
 I don't think there is a fix for the SVG border for now. It looks like there may be in the future: 
